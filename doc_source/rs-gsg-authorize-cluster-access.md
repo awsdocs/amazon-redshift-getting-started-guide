@@ -1,9 +1,7 @@
 # Step 4: Authorize Access to the Cluster<a name="rs-gsg-authorize-cluster-access"></a>
 
 In the previous step, you launched your Amazon Redshift cluster\. Before you can connect to the cluster, you need to configure a security group to authorize access: 
-
 + If you launched your cluster in the EC2\-VPC platform, follow the steps in [To Configure the VPC Security Group \(EC2\-VPC Platform\)](#rs-gsg-how-to-authorize-access-vpc-security-group)\.
-
 + If you launched your cluster in the EC2\-Classic platform, follow the steps in [To Configure the Amazon Redshift Security Group](#rs-gsg-how-to-authorize-access-cluster-security-group)\.
 
 **Note**  
@@ -22,13 +20,9 @@ You only need to configure one of these two types of security groups\. Follow th
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-security-vpc-security-group-select.png)
 
 1. Choose **Edit**, and enter the following, then choose **Save**: 
-
    + **Type**: **Custom TCP Rule**\.
-
    + **Protocol**: **TCP**\.
-
    + **Port Range**: type the same port number that you used when you launched the cluster\. The default port for Amazon Redshift is `5439`, but your port might be different\.
-
    + **Source**: select **Custom IP**, then type `0.0.0.0/0`\.
 **Important**  
 Using 0\.0\.0\.0/0 is not recommended for anything other than demonstration purposes because it allows access from any computer on the internet\. In a real environment, you would create inbound rules based on your own network settings\.  

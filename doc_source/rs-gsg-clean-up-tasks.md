@@ -7,23 +7,18 @@ When you have completed this tutorial, you can go to other Amazon Redshift resou
 ### Additional Resources<a name="rs-gsg-additional-resources"></a>
 
 We recommend that you continue to learn more about the concepts introduced in this guide with the following resources: 
-
-+ [Amazon Redshift Management Overview](http://docs.aws.amazon.com/redshift/latest/mgmt/overview.html): This topic provides an overview of Amazon Redshift\.
-
-+ [Amazon Redshift Cluster Management Guide](http://docs.aws.amazon.com/redshift/latest/mgmt/): This guide builds upon this *Amazon Redshift Getting Started* and provides in\-depth information about the concepts and tasks for creating, managing, and monitoring clusters\.
-
-+ [Amazon Redshift Database Developer Guide](http://docs.aws.amazon.com/redshift/latest/dg/): This guide builds upon this *Amazon Redshift Getting Started* by providing in\-depth information for database developers about designing, building, querying, and maintaining the databases that make up your data warehouse\.
++ [Amazon Redshift Management Overview](https://docs.aws.amazon.com/redshift/latest/mgmt/overview.html): This topic provides an overview of Amazon Redshift\.
++ [Amazon Redshift Cluster Management Guide](https://docs.aws.amazon.com/redshift/latest/mgmt/): This guide builds upon this *Amazon Redshift Getting Started* and provides in\-depth information about the concepts and tasks for creating, managing, and monitoring clusters\.
++ [Amazon Redshift Database Developer Guide](https://docs.aws.amazon.com/redshift/latest/dg/): This guide builds upon this *Amazon Redshift Getting Started* by providing in\-depth information for database developers about designing, building, querying, and maintaining the databases that make up your data warehouse\.
 
 ### Resetting Your Environment<a name="rs-gsg-reset-environment"></a>
 
 When you have completed this tutorial, you should reset your environment to the previous state by doing the following: 
-
 + Revoke access to the port and CIDR/IP address for which you authorized access:
 
   If you used the EC2\-VPC platform to launch your cluster, perform the steps in [To Revoke Access from the VPC Security Group](#rs-gsg-how-to-revoke-access-vpc-security-group)\.
 
   If you used the EC2\-Classic platform to launch your cluster, perform the steps in [To Revoke Access from the Cluster Security Group](#rs-gsg-how-to-revoke-access-cluster-security-group)\.
-
 + Delete your sample cluster\. **You will continue to incur charges for the Amazon Redshift service until you delete the cluster**\. Perform the steps in [To Delete the Sample Cluster](#rs-gsg-how-to-delete-sample-cluster)\.
 
 #### To Revoke Access from the VPC Security Group<a name="rs-gsg-how-to-revoke-access-vpc-security-group"></a>
@@ -32,7 +27,7 @@ When you have completed this tutorial, you should reset your environment to the 
 
 1. Choose **examplecluster** to open it, and make sure you are on the **Configuration** tab\.
 
-1. Under **Cluster Properties**, choose the vpc security group\.  
+1. Under **Cluster Properties**, choose the VPC security group\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-config-vpc-security-group.png)
 
 1. With the default security group selected, choose the **Inbound** tab and then choose **Edit**\.  
