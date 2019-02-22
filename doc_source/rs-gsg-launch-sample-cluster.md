@@ -22,11 +22,16 @@ If you use IAM user credentials, ensure that the user has the necessary permissi
 1. On the Cluster specifications page, enter the following values and then choose **Launch cluster**:
    + **Node type**: Choose **dc2\.large**\.
    + **Number of compute nodes**: Keep the default value of **2**\.
+   + **Cluster identifier**: Accept the default value of **redshift\-cluster\-1**\.
    + **Master user name**: Keep the default value of **awsuser**\.
    + **Master user password** and **Confirm password**: Enter a password for the master user account\.
    + **Database port**: Accept the default value of **5439**\.
-   + **Available IAM roles**: Choose **myRedshiftRole**\.   
+   + **Available IAM roles**: Choose **myRedshiftRole**\. 
+
+   Quick Launch automatically creates a default database named **dev**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-launch-cluster-wizard-10.png)
+**Note**  
+Quick Launch uses the default virtual private cloud \(VPC\) for your region\. If a default VPC doesn't exist, Quick Launch returns an error\. If you don't have a default VPC, you can use the standard Launch Cluster wizard to use a different VPC or use EC2 Classic without a VPC\. For more information, see [Creating a Cluster by Using Launch Cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-console.html#create-cluster)\.
 
 1. A confirmation page appears and the cluster will take a few minutes to finish\. Choose **Close** to return to the list of clusters\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-launch-cluster-wizard-50.png)

@@ -73,10 +73,16 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 
 1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
 
-1. In the navigation pane, choose **Query Editor**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-qe-overview.png)
+1. In the navigation pane, choose **Query Editor**\.
 
-1. For **Schema**, choose **public **to create a new table based on that schema\.
+1. In the Credentials dialog, enter the following values and then choose **Connect**:
+   + **Cluster**: Choose **redshift\-cluster\-1**\.
+   + **Database**: **dev**\.
+   + **Database user**: **awsuser**
+   + **Password**: Enter the password you specified when you launched the cluster\.
+
+1. For **Schema**, choose **public **to create a new table based on that schema\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-qe-overview.png)
 
 1. Enter the following in the Query Editor window and choose **Run query** to create a new table\.
 
