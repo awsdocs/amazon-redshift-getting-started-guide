@@ -39,7 +39,7 @@ Be aware of the following considerations when you use the Query Editor:
 
 ### Enabling Access to the Query Editor<a name="gsg-query-cluster-configure"></a>
 
-To access the Query Editor, you need permission\. To enable access, attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` policies for AWS Identity and Access Management \(IAM\) to the AWS account that you use to access your cluster\.
+To access the Query Editor, you need permission\. To enable access, attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` policies for AWS Identity and Access Management \(IAM\) to the AWS IAM user that you use to access your cluster\.
 
 If you have already created an IAM user to access Amazon Redshift, you can attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` policies to that user\. If you haven't created an IAM user yet, create one and attach the policies to the IAM user\.
 
@@ -75,11 +75,11 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 
 1. In the navigation pane, choose **Query Editor**\.
 
-1. In the Credentials dialog, enter the following values and then choose **Connect**:
+1. In the **Credentials** dialog box, enter the following values and then choose **Connect**:
    + **Cluster**: Choose **redshift\-cluster\-1**\.
    + **Database**: **dev**\.
    + **Database user**: **awsuser**
-   + **Password**: Enter the password you specified when you launched the cluster\.
+   + **Password**: Enter the password that you specified when you launched the cluster\.
 
 1. For **Schema**, choose **public **to create a new table based on that schema\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-qe-overview.png)
@@ -115,7 +115,7 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 
 ## Querying a Database Using a SQL Client<a name="connect-using-sql-client"></a>
 
-Now you will connect to your cluster by using a SQL client tool and run a simple query to test the connection\. You can use most SQL client tools that are compatible with PostgreSQL\. For this tutorial, you’ll use the SQL Workbench/J client that you installed in the prerequisites section of this tutorial\. Complete this section by performing the following steps: 
+Next, you connect to your cluster by using a SQL client tool and run a simple query to test the connection\. You can use most SQL client tools that are compatible with PostgreSQL\. For this tutorial, you use the SQL Workbench/J client that you installed in the prerequisites section of this tutorial\. Complete this section by performing the following steps: 
 + [Install SQL Client Drivers and Tools](#rs-gsg-sql-client)
 + [To Get Your Connection String](#rs-gsg-how-to-get-connection-string)
 + [To Connect from SQL Workbench/J to Your Cluster](#rs-gsg-how-to-connect-from-workbench)
@@ -124,10 +124,10 @@ After you complete this step, you can determine whether you want to load sample 
 
 ### Install SQL Client Drivers and Tools<a name="rs-gsg-sql-client"></a>
 
-You can use most SQL client tools with Amazon Redshift JDBC or ODBC drivers to connect to an Amazon Redshift cluster\. In this tutorial, we show you how to connect using SQL Workbench/J, a free, DBMS\-independent, cross\-platform SQL query tool\. If you plan to use SQL Workbench/J to complete this tutorial, follow the steps below to get set up with the Amazon Redshift JDBC driver and SQL Workbench/J\. For more complete instructions for installing SQL Workbench/J, go to [Setting Up the SQL Workbench/J Client](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html) in the *Amazon Redshift Cluster Management Guide*\. If you use an Amazon EC2 instance as your client computer, you will need to install SQL Workbench/J and the required drivers on the instance\.
+You can use most SQL client tools with Amazon Redshift JDBC or ODBC drivers to connect to an Amazon Redshift cluster\. In this tutorial, you connect using SQL Workbench/J, a free, DBMS\-independent, cross\-platform SQL query tool\. If you plan to use SQL Workbench/J to complete this tutorial, use the steps following to set up the Amazon Redshift JDBC driver and SQL Workbench/J\. For more complete instructions for installing SQL Workbench/J, go to [Setting Up the SQL Workbench/J Client](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html) in the *Amazon Redshift Cluster Management Guide*\. If you use an Amazon EC2 instance as your client computer, install SQL Workbench/J and the required drivers on the instance\.
 
 **Note**  
-You must install any third\-party database tools that you want to use with your clusters; Amazon Redshift does not provide or install any third\-party tools or libraries\.
+Install any third\-party database tools that you want to use with your clusters yourself\. Amazon Redshift doesn't provide or install any third\-party tools or libraries\.
 
 #### To Install SQL Workbench/J on Your Client Computer<a name="rs-gsg-how-to-install-sql-client-drivers-and-tools"></a>
 
@@ -137,7 +137,7 @@ You must install any third\-party database tools that you want to use with your 
 
 1. Go to the [Installing and starting SQL Workbench/J page](http://www.sql-workbench.net/manual/install.html) and install SQL Workbench/J\.
 **Important**  
-Note the Java runtime version prerequisites for SQL Workbench/J and ensure you are using that version, otherwise, this client application will not run\.
+Note the Java runtime version prerequisites for SQL Workbench/J and ensure you are using that version\. Otherwise, the client application doesn't run\.
 
 1. Go to [Configure a JDBC Connection](https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html) and download an Amazon Redshift JDBC driver to enable SQL Workbench/J to connect to your cluster\.
 
@@ -147,7 +147,7 @@ For more information about using the Amazon Redshift JDBC or ODBC drivers, see [
 
 1. In the Amazon Redshift console, in the navigation pane, choose **Clusters**\.
 
-1. Choose `examplecluster` to open it, and make sure you are on the **Configuration** tab\.
+1. Choose `examplecluster` to open it, and make sure that you are on the **Configuration** tab\.
 
 1. On the **Configuration** tab, under **Cluster Database Properties**, copy the JDBC URL of the cluster\. 
 **Note**  
@@ -164,29 +164,29 @@ This step assumes you installed SQL Workbench/J in [Step 1: Set Up Prerequisites
 
 1. Choose **Create a new connection profile**\.
 
-1. In the **New profile** text box, type a name for the profile\.
+1. For **New profile**, enter a name for the profile\.
 
-1. Choose **Manage Drivers**\. The **Manage Drivers** dialog opens\.
+1. Choose **Manage Drivers**\. The **Manage Drivers** dialog box opens\.
 
-1. Choose the **Create a new entry** button\. In the **Name** text box, type a name for the driver\.  
+1. Choose **Create a new entry**\. For **Name**, enter a name for the driver\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/jdbc-manage-drivers.png)
 
-   Choose the folder icon next to the **Library** box, navigate to the location of the driver, select it, and then choose **Open**\.  
+   Choose the folder icon next to the **Library** box, navigate to the location of the driver, choose it, and then choose **Open**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/redshift_jdbc_file.png)
 
-   If the **Please select one driver** dialog box displays, select **com\.amazon\.redshift\.jdbc4\.Driver** or **com\.amazon\.redshift\.jdbc41\.Driver** and choose **OK**\. SQL Workbench/J automatically completes the **Classname** box\. Leave the **Sample URL** box blank, and then choose **OK**\. 
+   If the **Please select one driver** dialog box displays, choose **com\.amazon\.redshift\.jdbc4\.Driver** or **com\.amazon\.redshift\.jdbc41\.Driver** and then choose **OK**\. SQL Workbench/J automatically completes the **Classname** box\. Keep **Sample URL** blank, and choose **OK**\. 
 
-1. In the **Driver** box, choose the driver you just added\.
+1. For **Driver**, choose the driver that you just added\.
 
-1. In **URL**, copy the JDBC URL from the Amazon Redshift console and paste it here\.
+1. For **URL**, copy the JDBC URL from the Amazon Redshift console and paste it here\.
 
-1. In **Username**, type *masteruser*\.
+1. For **Username**, enter **awsuser** for the master user\.
 
-1. In **Password**, type the password associated with the master user account\.
+1. For **Password**, enter the password associated with the master user account\.
 
-1. Choose the **Autocommit** box\. 
+1. Choose **Autocommit**\. 
 
-1. Choose the **Save profile list** icon, as shown below:  
+1. Choose the **Save profile list** icon, as shown following\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/sql_workbench_save.png)
 
 1. Choose **OK**\.  

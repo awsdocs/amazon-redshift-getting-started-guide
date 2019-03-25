@@ -11,7 +11,7 @@ You only need to configure one of these two types of security groups\. Follow th
 
 1. In the Amazon Redshift console, in the navigation pane, choose **Clusters**\.
 
-1. Choose `examplecluster` to open it, and make sure you are on the **Configuration** tab\.
+1. Choose `examplecluster` to open it, and make sure that you are on the **Configuration** tab\.
 
 1. Under **Cluster Properties**, for **VPC Security Groups**, choose your security group\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-config-vpc-security-group.png)
@@ -32,7 +32,7 @@ Using 0\.0\.0\.0/0 is not recommended for anything other than demonstration purp
 
 1. In the Amazon Redshift console, in the navigation pane, choose **Clusters**\.
 
-1. Choose `examplecluster` to open it, and make sure you are on the **Configuration** tab\.
+1. Choose `examplecluster` to open it, and make sure that you are on the **Configuration** tab\.
 
 1. Under **Cluster Properties**, for **Cluster Security Groups**, choose **default** to open the default security group\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-config-cluster-security-group.png)

@@ -1,6 +1,6 @@
 # Step 7: Find Additional Resources and Reset Your Environment<a name="rs-gsg-clean-up-tasks"></a>
 
-When you have completed this tutorial, you can go to other Amazon Redshift resources to learn more about the concepts introduced in this guide or you can reset your environment to the previous state\. You might want to keep the sample cluster running if you intend to try tasks in other Amazon Redshift guides\. However, remember that **you will continue to be charged for your cluster as long as it is running**\. You should revoke access to the cluster and delete it when you no longer need it so that you stop incurring charges\.
+When you have completed this tutorial, you can go to other Amazon Redshift resources to learn more about the concepts introduced in this guide\. You can also reset your environment to the previous state\. You might want to keep the sample cluster running if you intend to try tasks in other Amazon Redshift guides\. However, remember that *you continue to be charged for your cluster as long as it is running*\. To stop incurring charges, revoke access to the cluster and delete it when you no longer need it\.
 
 ## Where Do I Go From Here?<a name="rs-gsg-where-do-i-go"></a>
 
@@ -19,13 +19,13 @@ When you have completed this tutorial, you should reset your environment to the 
   If you used the EC2\-VPC platform to launch your cluster, perform the steps in [To Revoke Access from the VPC Security Group](#rs-gsg-how-to-revoke-access-vpc-security-group)\.
 
   If you used the EC2\-Classic platform to launch your cluster, perform the steps in [To Revoke Access from the Cluster Security Group](#rs-gsg-how-to-revoke-access-cluster-security-group)\.
-+ Delete your sample cluster\. **You will continue to incur charges for the Amazon Redshift service until you delete the cluster**\. Perform the steps in [To Delete the Sample Cluster](#rs-gsg-how-to-delete-sample-cluster)\.
++ Delete your sample cluster\. *You continue to incur charges for the Amazon Redshift service until you delete the cluster*\. Perform the steps in [To Delete the Sample Cluster](#rs-gsg-how-to-delete-sample-cluster)\.
 
 #### To Revoke Access from the VPC Security Group<a name="rs-gsg-how-to-revoke-access-vpc-security-group"></a>
 
 1. In the Amazon Redshift console, in the navigation pane, choose **Clusters**\.
 
-1. Choose **examplecluster** to open it, and make sure you are on the **Configuration** tab\.
+1. Choose **examplecluster** to open it, and make sure that you are on the **Configuration** tab\.
 
 1. Under **Cluster Properties**, choose the VPC security group\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-config-vpc-security-group.png)
@@ -40,7 +40,7 @@ When you have completed this tutorial, you should reset your environment to the 
 
 1. In the Amazon Redshift console, in the navigation pane, choose **Clusters**\.
 
-1. Choose examplecluster to open it, and make sure you are on the **Configuration** tab\.
+1. Choose **examplecluster** to open it, and make sure that you are on the **Configuration** tab\.
 
 1. Under **Cluster Properties**, for **Cluster Security Groups**, choose **default** to open the default security group\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-config-cluster-security-group.png)
@@ -54,7 +54,7 @@ When you have completed this tutorial, you should reset your environment to the 
 
 1. In the Amazon Redshift console, in the navigation pane, choose **Clusters**\.
 
-1. Choose examplecluster to open it, and make sure you are on the **Configuration** tab\.
+1. Choose examplecluster to open it, and make sure that you are on the **Configuration** tab\.
 
 1. In the **Cluster** menu, choose **Delete**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-cluster-menu.png)
@@ -62,5 +62,5 @@ When you have completed this tutorial, you should reset your environment to the 
 1. In the **Delete Cluster** window, for **Create snapshot**, choose **No** and then choose **Delete**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-cluster-delete-final-snapshot.png)
 
-1. On the cluster details window, the **Cluster Status** will display that the cluster being deleted\.  
+1. On the cluster details window, the **Cluster Status** displays that the cluster is being deleted\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-config-delete-status.png)

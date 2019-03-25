@@ -1,15 +1,17 @@
 # Step 6: Load Sample Data from Amazon S3<a name="rs-gsg-create-sample-db"></a>
 
-At this point you have a database called `dev` and you are connected to it\. Now you will create some tables in the database, upload data to the tables, and try a query\. For your convenience, the sample data you will load is available in an Amazon S3 bucket\. 
+At this point, you have a database called `dev` and you are connected to it\. Next, you create some tables in the database, upload data to the tables, and try a query\. For your convenience, the sample data you load is available in an Amazon S3 bucket\. 
 
 **Note**  
 If you're using a SQL client tool, ensure that your SQL client is connected to the cluster\.
 
 After you complete this step, you can find more information about Amazon Redshift and reset your environment at [Where Do I Go From Here?](rs-gsg-clean-up-tasks.md#rs-gsg-where-do-i-go)\.
 
+**To load sample data**
+
 1. Create tables\.
 
-   Copy and execute the following create table statements to create tables in the `dev` database\. For more information about the syntax, go to [CREATE TABLE](https://docs.aws.amazon.com/redshift/latest/dg/r_CREATE_TABLE_NEW.html) in the *Amazon Redshift Database Developer Guide*\.
+   Copy and run the following create table statements to create tables in the `dev` database\. For more information about the syntax, see [CREATE TABLE](https://docs.aws.amazon.com/redshift/latest/dg/r_CREATE_TABLE_NEW.html) in the *Amazon Redshift Database Developer Guide*\.
 
    ```
    create table users(
@@ -88,17 +90,17 @@ After you complete this step, you can find more information about Amazon Redshif
 
 1.  Load sample data from Amazon S3 by using the COPY command\. 
 **Note**  
- We recommend using the COPY command to load large datasets into Amazon Redshift from Amazon S3 or DynamoDB\. For more information about COPY syntax, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the *Amazon Redshift Database Developer Guide*\. 
+We recommend using the COPY command to load large datasets into Amazon Redshift from Amazon S3 or DynamoDB\. For more information about COPY syntax, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the *Amazon Redshift Database Developer Guide*\. 
 
    The sample data for this tutorial is provided in an Amazon S3 bucket that is owned by Amazon Redshift\. The bucket permissions are configured to allow all authenticated AWS users read access to the sample data files\. 
 
    To load the sample data, you must provide authentication for your cluster to access Amazon S3 on your behalf\. You can provide either role\-based authentication or key\-based authentication\. We recommend using role\-based authentication\. For more information about both types of authentication, see [CREDENTIALS](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-credentials.html) in the Amazon Redshift Database Developer Guide\.
 
-   For this step, you will provide authentication by referencing the IAM role you created and then attached to your cluster in previous steps\.
+   For this step, you provide authentication by referencing the IAM role that you created and then attached to your cluster in previous steps\.
 **Note**  
- If you don’t have proper permissions to access Amazon S3, you receive the following error message when running the COPY command: `S3ServiceException: Access Denied`\.
+If you don't have proper permissions to access Amazon S3, you receive the following error message when running the COPY command: `S3ServiceException: Access Denied`\.
 
-   The COPY commands include a placeholder for the IAM role ARN, as shown in the following example\.
+   The COPY commands include a placeholder for the Amazon Resource Name \(ARN\) for the IAM role, as shown in the following example\.
 
    ```
    copy users from 's3://awssampledbuswest2/tickit/allusers_pipe.txt' 
@@ -106,9 +108,9 @@ After you complete this step, you can find more information about Amazon Redshif
    delimiter '|' region 'us-west-2';
    ```
 
-   To authorize access using an IAM role, replace *<iam\-role\-arn>* in the CREDENTIALS parameter string with the role ARN for the IAM role you created in [Step 2: Create an IAM Role](rs-gsg-create-an-iam-role.md)\.
+   To authorize access using an IAM role, replace `<iam-role-arn>` in the CREDENTIALS parameter string with the role ARN for the IAM role that you created in [Step 2: Create an IAM Role](rs-gsg-create-an-iam-role.md)\.
 
-    Your COPY command will look similar to the following example\. 
+    Your COPY command looks similar to the following example\. 
 
    ```
    copy users from 's3://awssampledbuswest2/tickit/allusers_pipe.txt' 
@@ -148,7 +150,7 @@ After you complete this step, you can find more information about Amazon Redshif
    delimiter '\t' timeformat 'MM/DD/YYYY HH:MI:SS' region 'us-west-2';
    ```
 
-1. Now try the example queries\. For more information, go to [SELECT](https://docs.aws.amazon.com/redshift/latest/dg/r_SELECT_synopsis.html) in the *Amazon Redshift Developer Guide*\.
+1. Now try the example queries\. For more information, see [SELECT](https://docs.aws.amazon.com/redshift/latest/dg/r_SELECT_synopsis.html) in the *Amazon Redshift Developer Guide*\.
 
    ```
    -- Get definition for the sales table.
@@ -182,14 +184,18 @@ After you complete this step, you can find more information about Amazon Redshif
    ORDER BY total_price desc;
    ```
 
-1. You can optionally go the Amazon Redshift console to review the queries you executed\. The **Queries** tab shows a list of queries that you executed over a time period you specify\. By default, the console displays queries that have executed in the last 24 hours, including currently executing queries\. 
-   + Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
-   + In the cluster list in the right pane, choose `examplecluster`\.
-   + Choose the **Queries** tab\. 
+1. \(Optional\) Open the Amazon Redshift console to review the queries that you ran\. The **Queries** tab shows a list of queries that you ran over a time period you specify\. By default, the console displays queries that have executed in the last 24 hours, including currently executing queries\. 
 
-     The console displays list of queries you executed as shown in the example below\.  
+   1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
+
+   1. In the cluster list in the right pane, choose `examplecluster`\.
+
+   1. Choose the **Queries** tab\. 
+
+      The console displays list of queries you ran, as shown in the example following\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/cmdws-cluster-query-list.png)
-   + To view more information about a query, choose the query ID link in the **Query** column or choose the magnifying glass icon\. 
 
-     The following example shows the details of a query you ran in a previous step\.   
+   1. To view more information about a query, choose the query ID link in the **Query** column or choose the magnifying glass icon\. 
+
+      The following example shows the details of a query you ran in a previous step\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/cmdws-cluster-query.png)

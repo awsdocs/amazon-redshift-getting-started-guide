@@ -3,7 +3,7 @@
 Now that you have the prerequisites completed, you can launch your Amazon Redshift cluster\.
 
 **Important**  
- **The cluster that you are about to launch will be live \(and not running in a sandbox\)\. You will incur the standard Amazon Redshift usage fees for the cluster until you delete it\.** If you complete the tutorial described here in one sitting and delete the cluster when you are finished, the total charges will be minimal\. 
+*The cluster that you are about to launch is live \(and not running in a sandbox\)\. You incur the standard Amazon Redshift usage fees for the cluster until you delete it\.* If you complete the tutorial described here in one sitting and delete the cluster when you are finished, the total charges are minimal\. 
 
 ## To Launch an Amazon Redshift Cluster<a name="rs-gsg-how-to-launch-sample-cluster"></a>
 
@@ -33,7 +33,7 @@ If you use IAM user credentials, ensure that the user has the necessary permissi
 **Note**  
 Quick Launch uses the default virtual private cloud \(VPC\) for your region\. If a default VPC doesn't exist, Quick Launch returns an error\. If you don't have a default VPC, you can use the standard Launch Cluster wizard to use a different VPC or use EC2 Classic without a VPC\. For more information, see [Creating a Cluster by Using Launch Cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-console.html#create-cluster)\.
 
-1. A confirmation page appears and the cluster will take a few minutes to finish\. Choose **Close** to return to the list of clusters\.  
+1. A confirmation page appears and the cluster takes a few minutes to finish\. Choose **Close** to return to the list of clusters\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-launch-cluster-wizard-50.png)
 
 1. On the Clusters page, choose the cluster that you just launched and review the **Cluster Status** information\. Make sure that the **Cluster Status** is **available** and the **Database Health** is **healthy** before you try to connect to the database later in this tutorial\.  
