@@ -18,7 +18,9 @@ In this step, you create a new IAM role that enables Amazon Redshift to load dat
 
 1. Under **Select your use case**, choose **Redshift \- Customizable** then choose **Next: Permissions**\.
 
-1. On the **Attach permissions policies** page, choose **AmazonS3ReadOnlyAccess**, and then choose **Next: Review**\.
+1. On the **Attach permissions policies** page, choose **AmazonS3ReadOnlyAccess**, and then choose **Next: Tags**\.
+
+1. Tags are optional, we will be skipping this. Choose **Next: Review**\.
 
 1. For **Role name**, type a name for your role\. For this tutorial, type `myRedshiftRole`\. 
 
