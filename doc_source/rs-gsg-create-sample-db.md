@@ -11,7 +11,7 @@ After you complete this step, you can find more information about Amazon Redshif
 
 1. Create tables\.
 
-   Copy and run the following create table statements to create tables in the `dev` database\. For more information about the syntax, see [CREATE TABLE](https://docs.aws.amazon.com/redshift/latest/dg/r_CREATE_TABLE_NEW.html) in the *Amazon Redshift Database Developer Guide*\.
+   Individually copy and run the following create table statements to create tables in the `dev` database\. For more information about the syntax, see [CREATE TABLE](https://docs.aws.amazon.com/redshift/latest/dg/r_CREATE_TABLE_NEW.html) in the *Amazon Redshift Database Developer Guide*\.
 
    ```
    create table users(
@@ -118,7 +118,7 @@ If you don't have proper permissions to access Amazon S3, you receive the follow
    delimiter '|' region 'us-west-2';
    ```
 
-   To load the sample data, replace *<iam\-role\-arn>* in the following COPY commands with your role ARN\. Then run the commands in your SQL client tool\.
+   To load the sample data, replace *<iam\-role\-arn>* in the following COPY commands with your role ARN\. Then run the commands individually in your SQL client tool\.
 
    ```
    copy users from 's3://awssampledbuswest2/tickit/allusers_pipe.txt' 

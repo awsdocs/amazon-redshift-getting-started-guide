@@ -2,7 +2,7 @@
 
 The following table describes the important changes since the last release of the *Amazon Redshift Getting Started Guide*\.
 
-**Latest documentation update: August 10, 2018**
+**Latest documentation update: May 3, 2019**
 
 
 | Change | Description | Release Date | 

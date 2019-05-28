@@ -4,7 +4,7 @@ To query databases hosted by your Amazon Redshift cluster, you have two options:
 + Connect to your cluster and run queries on the AWS Management Console with the Query Editor\. 
 
   If you use the Query Editor, you don't have to download and set up a SQL client application\. 
-+ Connect to your cluster through a SQL client tool, such as SQL Workbench/j\. 
++ Connect to your cluster through a SQL client tool, such as SQL Workbench/J\. 
 
 **Topics**
 + [Querying a Database Using the Query Editor](#gsg-query-editor)
@@ -28,14 +28,7 @@ Using the Query Editor, you can do the following:
 
 ### Query Editor Considerations<a name="gsg-query-editor-considerations"></a>
 
-Be aware of the following considerations when you use the Query Editor:
-+ Up to 50 users can connect to a cluster with the Query Editor at the same time\.
-+ Up to 500 users can connect to a cluster simultaneously\. This total includes the users connecting through the Query Editor\.
-+ Up to 50 workload management \(WLM\) query slots can be active at the same time\. For more information about query slots, see [Implementing Workload Management](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-implementing-workload-management.html)\.
-+ Query Editor only runs short queries that can complete within two minutes\. 
-+ Query result sets are paginated with 100 rows per page\.
-+ You can't use the Query Editor with Enhanced VPC routing\. 
-+ You can't use transactions in the Query Editor\. For more information about transactions, see [BEGIN](https://docs.aws.amazon.com/redshift/latest/dg/r_BEGIN.html) in the *Amazon Redshift Database Developer Guide\.*
+For details about considerations when using the Query Editor, see [Querying a Database Using the Query Editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html) in the Amazon Redshift Cluster Management Guide\.
 
 ### Enabling Access to the Query Editor<a name="gsg-query-cluster-configure"></a>
 
@@ -76,7 +69,7 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 1. In the navigation pane, choose **Query Editor**\.
 
 1. In the **Credentials** dialog box, enter the following values and then choose **Connect**:
-   + **Cluster**: Choose **redshift\-cluster\-1**\.
+   + **Cluster**: Choose **examplecluster**\.
    + **Database**: **dev**\.
    + **Database user**: **awsuser**
    + **Password**: Enter the password that you specified when you launched the cluster\.
@@ -115,7 +108,7 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 
 ## Querying a Database Using a SQL Client<a name="connect-using-sql-client"></a>
 
-Next, you connect to your cluster by using a SQL client tool and run a simple query to test the connection\. You can use most SQL client tools that are compatible with PostgreSQL\. For this tutorial, you use the SQL Workbench/J client that you installed in the prerequisites section of this tutorial\. Complete this section by performing the following steps: 
+Next, you connect to your cluster by using a SQL client tool and run a simple query to test the connection\. You can use most SQL client tools that are compatible with PostgreSQL\. For this tutorial, you use the SQL Workbench/J client\.  Complete this section by performing the following steps: 
 + [Install SQL Client Drivers and Tools](#rs-gsg-sql-client)
 + [To Get Your Connection String](#rs-gsg-how-to-get-connection-string)
 + [To Connect from SQL Workbench/J to Your Cluster](#rs-gsg-how-to-connect-from-workbench)
@@ -156,7 +149,7 @@ The endpoint for your cluster is not available until the cluster is created and 
 
 ### To Connect from SQL Workbench/J to Your Cluster<a name="rs-gsg-how-to-connect-from-workbench"></a>
 
-This step assumes you installed SQL Workbench/J in [Step 1: Set Up Prerequisites](rs-gsg-prereq.md)\.
+This step assumes you installed SQL Workbench/J\.
 
 1. Open SQL Workbench/J\.
 

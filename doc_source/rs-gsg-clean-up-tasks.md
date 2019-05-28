@@ -17,8 +17,6 @@ When you have completed this tutorial, you should reset your environment to the 
 + Revoke access to the port and CIDR/IP address for which you authorized access:
 
   If you used the EC2\-VPC platform to launch your cluster, perform the steps in [To Revoke Access from the VPC Security Group](#rs-gsg-how-to-revoke-access-vpc-security-group)\.
-
-  If you used the EC2\-Classic platform to launch your cluster, perform the steps in [To Revoke Access from the Cluster Security Group](#rs-gsg-how-to-revoke-access-cluster-security-group)\.
 + Delete your sample cluster\. *You continue to incur charges for the Amazon Redshift service until you delete the cluster*\. Perform the steps in [To Delete the Sample Cluster](#rs-gsg-how-to-delete-sample-cluster)\.
 
 #### To Revoke Access from the VPC Security Group<a name="rs-gsg-how-to-revoke-access-vpc-security-group"></a>
@@ -35,20 +33,6 @@ When you have completed this tutorial, you should reset your environment to the 
 
 1. Delete the custom TCP/IP ingress rule that you created for your port and CIDR/IP address 0\.0\.0\.0/0\. Do not remove any other rules, such as the **All traffic** rule that was created for the security group by default\. Choose **Save**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-security-vpc-security-group-revoke.png)
-
-#### To Revoke Access from the Cluster Security Group<a name="rs-gsg-how-to-revoke-access-cluster-security-group"></a>
-
-1. In the Amazon Redshift console, in the navigation pane, choose **Clusters**\.
-
-1. Choose **examplecluster** to open it, and make sure that you are on the **Configuration** tab\.
-
-1. Under **Cluster Properties**, for **Cluster Security Groups**, choose **default** to open the default security group\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-config-cluster-security-group.png)
-
-1. On the **Security Groups** tab, in the cluster security group list, choose the default cluster security group \.
-
-1. On the **Security Group Connections** tab, select the custom CIDR/IP ingress rule that you created for CIDR/IP address 0\.0\.0\.0/0 and choose **Revoke**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/security-group-rule-revoke.png)
 
 #### To Delete the Sample Cluster<a name="rs-gsg-how-to-delete-sample-cluster"></a>
 
