@@ -7,8 +7,8 @@ The following table describes the important changes since the last release of th
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
-|  New Feature  |  Updated the guide to describe the Quick launch cluster procedure\.  |  August 10, 2018  | 
-|  New Feature  |  Updated the guide to launch clusters from the Amazon Redshift Dashboard\.  |  July 28, 2015  | 
+|  New Feature  |  Updated the guide to describe the quick\-launch cluster procedure\.  |  August 10, 2018  | 
+|  New Feature  |  Updated the guide to launch clusters from the Amazon Redshift dashboard\.  |  July 28, 2015  | 
 |  New Feature  |  Updated the guide to use new node type names\.  |  June 9, 2015  | 
 |  Documentation Update  |  Updated screenshots and procedure for configuring VPC security groups\.  |  April 30, 2015  | 
 |  Documentation Update  |  Updated screenshots and procedures to match the current console\.  |  November 12, 2014  | 
