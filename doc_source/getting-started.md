@@ -12,7 +12,7 @@ If you are building a proof\-of\-concept solution with Amazon Redshift, we recom
  This guide is a tutorial designed to walk you through the process of creating a sample Amazon Redshift cluster\. You can use this sample cluster to evaluate the Amazon Redshift service\. In this tutorial, you perform the following steps:  
 + [Step 1: Set Up Prerequisites](rs-gsg-prereq.md)
 + [Step 2: Create an IAM Role](rs-gsg-create-an-iam-role.md)
-+ [Step 3: Launch a Sample Amazon Redshift Cluster](rs-gsg-launch-sample-cluster.md)
++ [Step 3: Create a Sample Amazon Redshift Cluster](rs-gsg-launch-sample-cluster.md)
 + [Step 4: Authorize Access to the Cluster](rs-gsg-authorize-cluster-access.md)
 + [Step 5: Connect to the Sample Cluster and Run Queries](rs-gsg-connect-to-cluster.md)
 + [Step 6: Load Sample Data from Amazon S3](rs-gsg-create-sample-db.md)

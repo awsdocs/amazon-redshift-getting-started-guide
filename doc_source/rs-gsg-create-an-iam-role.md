@@ -22,7 +22,7 @@ In this step, you create a new IAM role that enables Amazon Redshift to load dat
 
 1. The **Add tags** page appears\. You can optionally add tags\. Choose **Next: Review**\.
 
-1. For **Role name**, type a name for your role\. For this tutorial, type `myRedshiftRole`\. 
+1. For **Role name**, enter a name for your role\. For this tutorial, enter **myRedshiftRole**\. 
 
 1. Review the information, and then choose **Create Role**\.
 
@@ -30,4 +30,4 @@ In this step, you create a new IAM role that enables Amazon Redshift to load dat
 
 1. Copy the **Role ARN** to your clipboard—this value is the Amazon Resource Name \(ARN\) for the role that you just created\. You use that value when you use the COPY command to load data in [Step 6: Load Sample Data from Amazon S3](rs-gsg-create-sample-db.md)\.
 
-Now that you have created the new role, your next step is to attach it to your cluster\. You can attach the role when you launch a new cluster or you can attach it to an existing cluster\. In the next step, you'll attach the role to a new cluster\.
+Now that you have created the new role, your next step is to attach it to your cluster\. You can attach the role when you launch a new cluster or you can attach it to an existing cluster\. In the next step, you attach the role to a new cluster\.

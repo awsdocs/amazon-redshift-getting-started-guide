@@ -92,7 +92,7 @@ After you complete this step, you can find more information about Amazon Redshif
 **Note**  
 We recommend using the COPY command to load large datasets into Amazon Redshift from Amazon S3 or DynamoDB\. For more information about COPY syntax, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the *Amazon Redshift Database Developer Guide*\. 
 
-   The sample data for this tutorial is provided in an Amazon S3 bucket that is owned by Amazon Redshift\. The bucket permissions are configured to allow all authenticated AWS users read access to the sample data files\. 
+   Download file [tickitdb\.zip](samples/tickitdb.zip) that contains individual sample data files\. Unzip and load the individual files to a `tickit` folder in your Amazon S3 bucket in your AWS Region\. Edit the COPY commands in this tutorial to point to the files in your Amazon S3 bucket\. For information about how to manage files with Amazon S3, see [Creating and Configuring an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\. 
 
    To load the sample data, you must provide authentication for your cluster to access Amazon S3 on your behalf\. You can provide either role\-based authentication or key\-based authentication\. We recommend using role\-based authentication\. For more information about both types of authentication, see [CREDENTIALS](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-credentials.html) in the Amazon Redshift Database Developer Guide\.
 
@@ -100,12 +100,12 @@ We recommend using the COPY command to load large datasets into Amazon Redshift 
 **Note**  
 If you don't have proper permissions to access Amazon S3, you receive the following error message when running the COPY command: `S3ServiceException: Access Denied`\.
 
-   The COPY commands include a placeholder for the Amazon Resource Name \(ARN\) for the IAM role, as shown in the following example\.
+   The COPY commands include a placeholder for the Amazon Resource Name \(ARN\) for the IAM role, your bucket name, and an AWS Region, as shown in the following example\.
 
    ```
-   copy users from 's3://awssampledbuswest2/tickit/allusers_pipe.txt' 
+   copy users from 's3://<myBucket>/tickit/allusers_pipe.txt' 
    credentials 'aws_iam_role=<iam-role-arn>' 
-   delimiter '|' region 'us-west-2';
+   delimiter '|' region '<aws-region>';
    ```
 
    To authorize access using an IAM role, replace `<iam-role-arn>` in the CREDENTIALS parameter string with the role ARN for the IAM role that you created in [Step 2: Create an IAM Role](rs-gsg-create-an-iam-role.md)\.
@@ -113,41 +113,41 @@ If you don't have proper permissions to access Amazon S3, you receive the follow
     Your COPY command looks similar to the following example\. 
 
    ```
-   copy users from 's3://awssampledbuswest2/tickit/allusers_pipe.txt' 
+   copy users from 's3://<myBucket>/tickit/allusers_pipe.txt' 
    credentials 'aws_iam_role=arn:aws:iam::123456789012:role/myRedshiftRole' 
-   delimiter '|' region 'us-west-2';
+   delimiter '|' region '<aws-region>';
    ```
 
-   To load the sample data, replace *<iam\-role\-arn>* in the following COPY commands with your role ARN\. Then run the commands individually in your SQL client tool\.
+   To load the sample data, replace *<myBucket>*, *<iam\-role\-arn>*, and *<aws\-region>* in the following COPY commands with your values\. Then run the commands individually in your SQL client tool\.
 
    ```
-   copy users from 's3://awssampledbuswest2/tickit/allusers_pipe.txt' 
+   copy users from 's3://<myBucket>/tickit/allusers_pipe.txt' 
    credentials 'aws_iam_role=<iam-role-arn>' 
-   delimiter '|' region 'us-west-2';
+   delimiter '|' region '<aws-region>';
    
-   copy venue from 's3://awssampledbuswest2/tickit/venue_pipe.txt' 
+   copy venue from 's3://<myBucket>/tickit/venue_pipe.txt' 
    credentials 'aws_iam_role=<iam-role-arn>' 
-   delimiter '|' region 'us-west-2';
+   delimiter '|' region '<aws-region>';
    
-   copy category from 's3://awssampledbuswest2/tickit/category_pipe.txt' 
+   copy category from 's3://<myBucket>/tickit/category_pipe.txt' 
    credentials 'aws_iam_role=<iam-role-arn>' 
-   delimiter '|' region 'us-west-2';
+   delimiter '|' region '<aws-region>';
    
-   copy date from 's3://awssampledbuswest2/tickit/date2008_pipe.txt' 
+   copy date from 's3://<myBucket>/tickit/date2008_pipe.txt' 
    credentials 'aws_iam_role=<iam-role-arn>' 
-   delimiter '|' region 'us-west-2';
+   delimiter '|' region '<aws-region>';
    
-   copy event from 's3://awssampledbuswest2/tickit/allevents_pipe.txt' 
+   copy event from 's3://<myBucket>/tickit/allevents_pipe.txt' 
    credentials 'aws_iam_role=<iam-role-arn>' 
-   delimiter '|' timeformat 'YYYY-MM-DD HH:MI:SS' region 'us-west-2';
+   delimiter '|' timeformat 'YYYY-MM-DD HH:MI:SS' region '<aws-region>';
    
-   copy listing from 's3://awssampledbuswest2/tickit/listings_pipe.txt' 
+   copy listing from 's3://<myBucket>/tickit/listings_pipe.txt' 
    credentials 'aws_iam_role=<iam-role-arn>' 
-   delimiter '|' region 'us-west-2';
+   delimiter '|' region '<aws-region>';
    
-   copy sales from 's3://awssampledbuswest2/tickit/sales_tab.txt'
+   copy sales from 's3://<myBucket>/tickit/sales_tab.txt'
    credentials 'aws_iam_role=<iam-role-arn>'
-   delimiter '\t' timeformat 'MM/DD/YYYY HH:MI:SS' region 'us-west-2';
+   delimiter '\t' timeformat 'MM/DD/YYYY HH:MI:SS' region '<aws-region>';
    ```
 
 1. Now try the example queries\. For more information, see [SELECT](https://docs.aws.amazon.com/redshift/latest/dg/r_SELECT_synopsis.html) in the *Amazon Redshift Developer Guide*\.
@@ -183,19 +183,3 @@ If you don't have proper permissions to access Amazon S3, you receive the follow
           AND percentile = 1
    ORDER BY total_price desc;
    ```
-
-1. \(Optional\) Open the Amazon Redshift console to review the queries that you ran\. The **Queries** tab shows a list of queries that you ran over a time period you specify\. By default, the console displays queries that have executed in the last 24 hours, including currently executing queries\. 
-
-   1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
-
-   1. In the cluster list in the right pane, choose `examplecluster`\.
-
-   1. Choose the **Queries** tab\. 
-
-      The console displays list of queries you ran, as shown in the example following\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/cmdws-cluster-query-list.png)
-
-   1. To view more information about a query, choose the query ID link in the **Query** column or choose the magnifying glass icon\. 
-
-      The following example shows the details of a query you ran in a previous step\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/cmdws-cluster-query.png)

@@ -13,13 +13,34 @@ We recommend that you continue to learn more about the concepts introduced in th
 
 ### Resetting Your Environment<a name="rs-gsg-reset-environment"></a>
 
+**Note**  
+A new console is available for Amazon Redshift\. Choose either the **New Console** or the **Original Console** instructions based on the console that you are using\. The **New Console** instructions are open by default\.
+
+#### New Console<a name="delete-cluster-sample"></a>
+
+When you have completed this tutorial, reset your environment to the previous state by deleting your sample cluster\. *You continue to incur charges for the Amazon Redshift service until you delete the cluster*\.
+
+**To delete a cluster**
+
+1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
+
+1. On the navigation menu, choose **CLUSTERS** to display your list of clusters\. 
+
+1. Choose the **examplecluster** cluster\. For **Actions**, choose **Delete**\. The **Delete cluster** page appears\. 
+
+1. Confirm the cluster to be deleted, then choose **Delete cluster**\. 
+
+On the cluster list page, the cluster status is updated as the cluster is deleted\. 
+
+#### Original Console<a name="delete-cluster-sample-originalconsole"></a>
+
 When you have completed this tutorial, you should reset your environment to the previous state by doing the following: 
 + Revoke access to the port and CIDR/IP address for which you authorized access:
 
   If you used the EC2\-VPC platform to launch your cluster, perform the steps in [To Revoke Access from the VPC Security Group](#rs-gsg-how-to-revoke-access-vpc-security-group)\.
 + Delete your sample cluster\. *You continue to incur charges for the Amazon Redshift service until you delete the cluster*\. Perform the steps in [To Delete the Sample Cluster](#rs-gsg-how-to-delete-sample-cluster)\.
 
-#### To Revoke Access from the VPC Security Group<a name="rs-gsg-how-to-revoke-access-vpc-security-group"></a>
+##### To Revoke Access from the VPC Security Group<a name="rs-gsg-how-to-revoke-access-vpc-security-group"></a>
 
 1. In the Amazon Redshift console, in the navigation pane, choose **Clusters**\.
 
@@ -34,11 +55,11 @@ When you have completed this tutorial, you should reset your environment to the 
 1. Delete the custom TCP/IP ingress rule that you created for your port and CIDR/IP address 0\.0\.0\.0/0\. Do not remove any other rules, such as the **All traffic** rule that was created for the security group by default\. Choose **Save**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-security-vpc-security-group-revoke.png)
 
-#### To Delete the Sample Cluster<a name="rs-gsg-how-to-delete-sample-cluster"></a>
+##### To Delete the Sample Cluster<a name="rs-gsg-how-to-delete-sample-cluster"></a>
 
 1. In the Amazon Redshift console, in the navigation pane, choose **Clusters**\.
 
-1. Choose examplecluster to open it, and make sure that you are on the **Configuration** tab\.
+1. Choose **examplecluster** to open it, and make sure that you are on the **Configuration** tab\.
 
 1. In the **Cluster** menu, choose **Delete**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-clusters-cluster-menu.png)

@@ -1,17 +1,48 @@
-# Step 3: Launch a Sample Amazon Redshift Cluster<a name="rs-gsg-launch-sample-cluster"></a>
+# Step 3: Create a Sample Amazon Redshift Cluster<a name="rs-gsg-launch-sample-cluster"></a>
 
 Now that you have the prerequisites completed, you can launch your Amazon Redshift cluster\.
 
 **Important**  
-*The cluster that you are about to launch is live \(and not running in a sandbox\)\. You incur the standard Amazon Redshift usage fees for the cluster until you delete it\.* If you complete the tutorial described here in one sitting and delete the cluster when you are finished, the total charges are minimal\. 
+*The cluster that you are about to create is live \(and not running in a sandbox\)\. You incur the standard Amazon Redshift usage fees for the cluster until you delete it\.* If you complete the tutorial described here in one sitting and delete the cluster when you are finished, the total charges are minimal\. 
 
-## To Launch an Amazon Redshift Cluster<a name="rs-gsg-how-to-launch-sample-cluster"></a>
+**Note**  
+A new console is available for Amazon Redshift\. Choose either the **New Console** or the **Original Console** instructions based on the console that you are using\. The **New Console** instructions are open by default\.
+
+## New Console<a name="create-cluster-sample"></a>
+
+**To create an Amazon Redshift cluster**
+
+1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
+**Important**  
+If you use IAM user credentials, ensure that you have the necessary permissions to perform the cluster operations\. For more information, see [Controlling Access to IAM Users](https://docs.aws.amazon.com/redshift/latest/mgmt/iam-redshift-user-mgmt.html) in the *Amazon Redshift Cluster Management Guide*\.
+
+1. At top right, choose the AWS Region in which you want to create the cluster\. 
+
+1. On the navigation menu, choose **CLUSTERS**, then choose **Create cluster**\. The **Create cluster** page appears\.
+
+1. Choose **dc2\.large** for the node type in the **Compute optimized** section\. For **Nodes**, choose **2**\. 
+**Note**  
+When you are creating a cluster for your data, you can use the Amazon Redshift console to help configure your cluster\. To do this, choose **Calculate the best configuration for your needs**\. When you do, a section of the page is replaced with controls for you to enter the size of your compressed data\. Confirm the defaults and then choose **Select this configuration**\. Your cluster configuration is displayed\. 
+
+1. In the **Cluster details** section, specify values for **Cluster identifier**, **Database port**, **Master user name**, and **Master user password**\. This tutorial uses these values: 
+   + **Cluster identifier**: Enter **examplecluster**\.
+   + **Database port**: Enter **5439**\.
+   + **Master user name**: Enter **awsuser**\.
+   + **Master user password**: Enter a value for the password\.
+
+1. In the **Cluster permissions** section, for **Available IAM roles** choose the IAM role that you previously created, **myRedshiftRole**\. Then choose **Add IAM role**\. 
+
+1. Choose **Create cluster**\. 
+
+## Original Console<a name="rs-gsg-how-to-launch-sample-cluster"></a>
+
+**To launch an Amazon Redshift cluster**
 
 1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
 **Important**  
 If you use IAM user credentials, ensure that the user has the necessary permissions to perform the cluster operations\. For more information, go to [Controlling Access to IAM Users](https://docs.aws.amazon.com/redshift/latest/mgmt/iam-redshift-user-mgmt.html) in the *Amazon Redshift Cluster Management Guide*\.
 
-1. In the main menu, select the region in which you want to create the cluster\. For the purposes of this tutorial, select **US West \(Oregon\)**\.  
+1. In the main menu, select the AWS Region in which you want to create the cluster\. For the purposes of this tutorial, select **US West \(Oregon\)**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-aws-region-selector.png)
 
 1. On the Amazon Redshift Dashboard, choose **Quick launch cluster**\.
@@ -28,10 +59,10 @@ If you use IAM user credentials, ensure that the user has the necessary permissi
    + **Database port**: Accept the default value of **5439**\.
    + **Available IAM roles**: Choose **myRedshiftRole**\. 
 
-   Quick Launch automatically creates a default database named **dev**\.  
+   Quick launch automatically creates a default database named **dev**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/gsg-launch-parameters.png)
 **Note**  
-Quick Launch uses the default virtual private cloud \(VPC\) for your region\. If a default VPC doesn't exist, Quick Launch returns an error\. If you don't have a default VPC, you can use the standard Launch Cluster wizard to use a different VPC\.  For more information, see [Creating a Cluster by Using Launch Cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-console.html#create-cluster)\.
+Quick launch uses the default virtual private cloud \(VPC\) for your AWS Region\. If a default VPC doesn't exist, Quick launch returns an error\. If you don't have a default VPC, you can use the standard Launch Cluster wizard to use a different VPC\. For more information, see [Creating a Cluster by Using Launch Cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-console.html#create-cluster)\.
 
 1. A confirmation page appears and the cluster takes a few minutes to finish\. Choose **Close** to return to the list of clusters\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/gsg-cluster-launching.png)

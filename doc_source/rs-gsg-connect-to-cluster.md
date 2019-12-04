@@ -1,10 +1,10 @@
 # Step 5: Connect to the Sample Cluster and Run Queries<a name="rs-gsg-connect-to-cluster"></a>
 
 To query databases hosted by your Amazon Redshift cluster, you have two options:
-+ Connect to your cluster and run queries on the AWS Management Console with the Query Editor\. 
++ Connect to your cluster and run queries on the AWS Management Console with the query editor\. 
 
-  If you use the Query Editor, you don't have to download and set up a SQL client application\. 
-+ Connect to your cluster through a SQL client tool, such as SQL Workbench/J\. 
+  If you use the query editor, you don't have to download and set up an SQL client application\. 
++ Connect to your cluster through an SQL client tool, such as SQL Workbench/J\. 
 
 **Topics**
 + [Querying a Database Using the Query Editor](#gsg-query-editor)
@@ -12,15 +12,16 @@ To query databases hosted by your Amazon Redshift cluster, you have two options:
 
 ## Querying a Database Using the Query Editor<a name="gsg-query-editor"></a>
 
-Using the Query Editor is the easiest way to run queries on databases hosted by your Amazon Redshift cluster\. After creating your cluster, you can immediately run queries by using the Query Editor on the Amazon Redshift console\.
+Using the query editor is the easiest way to run queries on databases hosted by your Amazon Redshift cluster\. After creating your cluster, you can immediately run queries using the console\. 
 
-The following cluster node types support the Query Editor:
+The following cluster node types support the query editor:
 + DC1\.8xlarge
 + DC2\.large
 + DC2\.8xlarge
 + DS2\.8xlarge
++ RA3\.16xlarge
 
-Using the Query Editor, you can do the following:
+Using the Amazon Redshift console query editor, you can do the following:
 + Run single SQL statement queries\.
 + Download result sets as large as 100 MB to a comma\-separated value \(CSV\) file\.
 + Save queries for reuse\. You can't save queries in the EU \(Paris\) Region or the Asia Pacific \(Osaka\-Local\) Region\.
@@ -28,11 +29,11 @@ Using the Query Editor, you can do the following:
 
 ### Query Editor Considerations<a name="gsg-query-editor-considerations"></a>
 
-For details about considerations when using the Query Editor, see [Querying a Database Using the Query Editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html) in the Amazon Redshift Cluster Management Guide\.
+For details about considerations when using the query editor, see [Querying a Database Using the Query Editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html) in the Amazon Redshift Cluster Management Guide\.
 
 ### Enabling Access to the Query Editor<a name="gsg-query-cluster-configure"></a>
 
-To access the Query Editor, you need permission\. To enable access, attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` policies for AWS Identity and Access Management \(IAM\) to the AWS IAM user that you use to access your cluster\.
+To access the query editor, you need permission\. To enable access, attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` policies for AWS Identity and Access Management \(IAM\) to the AWS IAM user that you use to access your cluster\.
 
 If you have already created an IAM user to access Amazon Redshift, you can attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` policies to that user\. If you haven't created an IAM user yet, create one and attach the policies to the IAM user\.
 
@@ -56,13 +57,69 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 
 ### Using the Query Editor<a name="gsg-using-query-editor"></a>
 
- In the following example, you use the Query Editor to perform the following tasks:
+ In the following example, you use the query editor to perform the following tasks:
 + Run SQL commands\.
 + View query execution details\.
 + Save a query\.
 + Download a query result set\.
 
-**To use the Query Editor**
+**Note**  
+A new console is available for Amazon Redshift\. Choose either the **New Console** or the **Original Console** instructions based on the console that you are using\. The **New Console** instructions are open by default\.
+
+#### New Console<a name="query-editor-getting-started"></a>
+
+**To use the query editor**
+
+1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
+
+1. On the navigation menu, choose **EDITOR**, then connect to a database in your cluster\. 
+
+   On the **Connect to database** window, enter the values you used when you created the cluster as follows: 
+   + **Cluster**: Choose **examplecluster**
+   + **Database name**: Enter **dev**
+   + **Database user**: Enter **awsuser**
+   + **Database password**: Enter **password that you specified when you created the cluster**
+
+   Then choose **Connect to database**\. 
+
+1. For **Schema**, choose **public **to create a new table based on that schema\.
+
+1. Enter the following in the query editor window, and choose **Run query** to create a new table\.
+
+   ```
+   create table shoes(
+                   shoetype varchar (10),
+                   color varchar(10));
+   ```
+
+1. Choose **Clear**\.
+
+1. Enter the following command in the query editor window, and choose **Run** to add rows to the table\.
+
+   ```
+   insert into shoes values 
+   ('loafers', 'brown'),
+   ('sandals', 'black');
+   ```
+
+1. Choose **Clear**\.
+
+1. Enter the following command in the query editor window, and choose **Run** to query the new table\.
+
+   ```
+   select * from shoes; 
+   ```
+
+   The **Query results** displays the results\.    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html)
+
+1. Choose **Execution** to view the run details\.
+
+1. Choose **Export** to download the query results as a file\.
+
+#### Original Console<a name="query-editor-getting-started-originalconsole"></a>
+
+**To use the query editor**
 
 1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
 
@@ -138,9 +195,30 @@ For more information about using the Amazon Redshift JDBC or ODBC drivers, see [
 
 ### To Get Your Connection String<a name="rs-gsg-how-to-get-connection-string"></a>
 
+To connect to your cluster with your SQL client tool, you need the cluster connection string\. You can find the cluster connection string in the Amazon Redshift console, on a cluster's details page\.
+
+**Note**  
+A new console is available for Amazon Redshift\. Choose either the **New Console** or the **Original Console** instructions based on the console that you are using\. The **New Console** instructions are open by default\.
+
+#### New Console<a name="connect-drivers-url-getting-started"></a>
+
+**To find the connection string for a cluster**
+
+1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
+
+1. On the navigation menu, choose **CLUSTERS**, then choose the cluster name from the list to open its details\. 
+
+1. Choose the **Properties** tab for the cluster, and view the **Connection details** to see the values for **JDBC URL** and **ODBC URL**\. The connection string is based on the AWS Region where the cluster runs\. 
+
+1. Choose **Copy** to copy the string on this page\. 
+
+#### Original Console<a name="connect-drivers-url-getting-started-originalconsole"></a>
+
+**To find the connection string for a cluster**
+
 1. In the Amazon Redshift console, in the navigation pane, choose **Clusters**\.
 
-1. Choose `examplecluster` to open it, and make sure that you are on the **Configuration** tab\.
+1. Choose **examplecluster** to open it, and make sure that you are on the **Configuration** tab\.
 
 1. On the **Configuration** tab, under **Cluster Database Properties**, copy the JDBC URL of the cluster\. 
 **Note**  
