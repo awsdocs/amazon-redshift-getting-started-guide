@@ -24,7 +24,7 @@ The following cluster node types support the query editor:
 Using the Amazon Redshift console query editor, you can do the following:
 + Run single SQL statement queries\.
 + Download result sets as large as 100 MB to a comma\-separated value \(CSV\) file\.
-+ Save queries for reuse\. You can't save queries in the EU \(Paris\) Region or the Asia Pacific \(Osaka\-Local\) Region\.
++ Save queries for reuse\. You can't save queries in the Europe \(Paris\) Region or the Asia Pacific \(Osaka\-Local\) Region\.
 + View query execution details for user\-defined tables\.
 
 ### Query Editor Considerations<a name="gsg-query-editor-considerations"></a>

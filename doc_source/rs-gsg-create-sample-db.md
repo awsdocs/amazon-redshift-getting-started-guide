@@ -98,7 +98,7 @@ We recommend using the COPY command to load large datasets into Amazon Redshift 
 
    For this step, you provide authentication by referencing the IAM role that you created and then attached to your cluster in previous steps\.
 **Note**  
-If you don't have proper permissions to access Amazon S3, you receive the following error message when running the COPY command: `S3ServiceException: Access Denied`\.
+If you don't have proper permissions to access Amazon S3, you receive the following error message when running the COPY command: `S3ServiceException: Access Denied`\. For information about IAM permissions for the COPY command, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/copy-usage_notes-access-permissions.html) in the *Amazon Redshift Database Developer Guide*\.
 
    The COPY commands include a placeholder for the Amazon Resource Name \(ARN\) for the IAM role, your bucket name, and an AWS Region, as shown in the following example\.
 

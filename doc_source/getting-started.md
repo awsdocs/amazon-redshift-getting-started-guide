@@ -7,8 +7,6 @@
 + [Service Highlights and Pricing](https://aws.amazon.com/redshift/) – This product detail page provides the Amazon Redshift value proposition, service highlights, and pricing\.
 + [Amazon Redshift Getting Started](https://docs.aws.amazon.com/redshift/latest/gsg/) \(*this guide*\) – This guide provides a tutorial of using Amazon Redshift to create a sample cluster and work with sample data\.
 
-If you are building a proof\-of\-concept solution with Amazon Redshift, we recommend that you read [Building a Proof of Concept for Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/dg/proof-of-concept-playbook.html)\.
-
  This guide is a tutorial designed to walk you through the process of creating a sample Amazon Redshift cluster\. You can use this sample cluster to evaluate the Amazon Redshift service\. In this tutorial, you perform the following steps:  
 + [Step 1: Set Up Prerequisites](rs-gsg-prereq.md)
 + [Step 2: Create an IAM Role](rs-gsg-create-an-iam-role.md)
