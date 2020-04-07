@@ -19,6 +19,7 @@ The following cluster node types support the query editor:
 + DC2\.large
 + DC2\.8xlarge
 + DS2\.8xlarge
++ RA3\.4xlarge
 + RA3\.16xlarge
 
 Using the Amazon Redshift console query editor, you can do the following:
