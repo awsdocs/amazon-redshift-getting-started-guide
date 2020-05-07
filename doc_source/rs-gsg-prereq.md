@@ -1,12 +1,12 @@
-# Step 1: Set Up Prerequisites<a name="rs-gsg-prereq"></a>
+# Step 1: Set up prerequisites<a name="rs-gsg-prereq"></a>
 
  Before you begin setting up an Amazon Redshift cluster, make sure that you complete the following prerequisites in this section: 
-+ [Sign Up for AWS](#rs-gsg-prereq-signup)
-+ [Determine Firewall Rules](#rs-gsg-prereq-firewall-rules)
++ [Sign up for AWS](#rs-gsg-prereq-signup)
++ [Determine firewall rules](#rs-gsg-prereq-firewall-rules)
 
-## Sign Up for AWS<a name="rs-gsg-prereq-signup"></a>
+## Sign up for AWS<a name="rs-gsg-prereq-signup"></a>
 
-If you don’t already have an AWS account, you must sign up for one\. If you already have an account, you can skip this prerequisite and use your existing account\.
+If you don't already have an AWS account, you must sign up for one\. If you already have an account, you can skip this prerequisite and use your existing account\.
 
 1. Open [https://portal\.aws\.amazon\.com/billing/signup](https://portal.aws.amazon.com/billing/signup)\.
 
@@ -14,7 +14,7 @@ If you don’t already have an AWS account, you must sign up for one\. If you al
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-## Determine Firewall Rules<a name="rs-gsg-prereq-firewall-rules"></a>
+## Determine firewall rules<a name="rs-gsg-prereq-firewall-rules"></a>
 
 As part of this tutorial, you specify a port when you launch your Amazon Redshift cluster\. You also create an inbound ingress rule in a security group to allow access through the port to your cluster\.
 

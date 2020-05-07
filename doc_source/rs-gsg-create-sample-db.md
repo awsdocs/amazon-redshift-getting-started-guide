@@ -1,11 +1,11 @@
-# Step 6: Load Sample Data from Amazon S3<a name="rs-gsg-create-sample-db"></a>
+# Step 6: Load sample data from Amazon S3<a name="rs-gsg-create-sample-db"></a>
 
 At this point, you have a database called `dev` and you are connected to it\. Next, you create some tables in the database, upload data to the tables, and try a query\. For your convenience, the sample data you load is available in an Amazon S3 bucket\. 
 
 **Note**  
 If you're using a SQL client tool, ensure that your SQL client is connected to the cluster\.
 
-After you complete this step, you can find more information about Amazon Redshift and reset your environment at [Where Do I Go From Here?](rs-gsg-clean-up-tasks.md#rs-gsg-where-do-i-go)\.
+After you complete this step, you can find more information about Amazon Redshift and reset your environment at [Where do I go from here?](rs-gsg-clean-up-tasks.md#rs-gsg-where-do-i-go)\.
 
 **To load sample data**
 
@@ -92,9 +92,9 @@ After you complete this step, you can find more information about Amazon Redshif
 **Note**  
 We recommend using the COPY command to load large datasets into Amazon Redshift from Amazon S3 or DynamoDB\. For more information about COPY syntax, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the *Amazon Redshift Database Developer Guide*\. 
 
-   Download file [tickitdb\.zip](samples/tickitdb.zip) that contains individual sample data files\. Unzip and load the individual files to a `tickit` folder in your Amazon S3 bucket in your AWS Region\. Edit the COPY commands in this tutorial to point to the files in your Amazon S3 bucket\. For information about how to manage files with Amazon S3, see [Creating and Configuring an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\. 
+   Download file [tickitdb\.zip](samples/tickitdb.zip) that contains individual sample data files\. Unzip and load the individual files to a `tickit` folder in your Amazon S3 bucket in your AWS Region\. Edit the COPY commands in this tutorial to point to the files in your Amazon S3 bucket\. For information about how to manage files with Amazon S3, see [Creating and configuring an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\. 
 
-   To load the sample data, you must provide authentication for your cluster to access Amazon S3 on your behalf\. You can provide either role\-based authentication or key\-based authentication\. We recommend using role\-based authentication\. For more information about both types of authentication, see [CREDENTIALS](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-credentials.html) in the Amazon Redshift Database Developer Guide\.
+   To load the sample data, you must provide authentication for your cluster to access Amazon S3 on your behalf\. You can provide either role\-based authentication or key\-based authentication\. We recommend using role\-based authentication\. For more information about both types of authentication, see [CREDENTIALS](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-credentials.html) in the *Amazon Redshift Database Developer Guide\.*
 
    For this step, you provide authentication by referencing the IAM role that you created and then attached to your cluster in previous steps\.
 **Note**  
@@ -108,7 +108,7 @@ If you don't have proper permissions to access Amazon S3, you receive the follow
    delimiter '|' region '<aws-region>';
    ```
 
-   To authorize access using an IAM role, replace `<iam-role-arn>` in the CREDENTIALS parameter string with the role ARN for the IAM role that you created in [Step 2: Create an IAM Role](rs-gsg-create-an-iam-role.md)\.
+   To authorize access using an IAM role, replace `<iam-role-arn>` in the CREDENTIALS parameter string with the role ARN for the IAM role that you created in [Step 2: Create an IAM role](rs-gsg-create-an-iam-role.md)\.
 
     Your COPY command looks similar to the following example\. 
 

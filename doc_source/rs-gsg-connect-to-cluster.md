@@ -1,4 +1,4 @@
-# Step 5: Connect to the Sample Cluster and Run Queries<a name="rs-gsg-connect-to-cluster"></a>
+# Step 5: Connect to the sample cluster and run queries<a name="rs-gsg-connect-to-cluster"></a>
 
 To query databases hosted by your Amazon Redshift cluster, you have two options:
 + Connect to your cluster and run queries on the AWS Management Console with the query editor\. 
@@ -7,10 +7,10 @@ To query databases hosted by your Amazon Redshift cluster, you have two options:
 + Connect to your cluster through an SQL client tool, such as SQL Workbench/J\. 
 
 **Topics**
-+ [Querying a Database Using the Query Editor](#gsg-query-editor)
-+ [Querying a Database Using a SQL Client](#connect-using-sql-client)
++ [Querying a database using the query editor](#gsg-query-editor)
++ [Querying a database using a SQL client](#connect-using-sql-client)
 
-## Querying a Database Using the Query Editor<a name="gsg-query-editor"></a>
+## Querying a database using the query editor<a name="gsg-query-editor"></a>
 
 Using the query editor is the easiest way to run queries on databases hosted by your Amazon Redshift cluster\. After creating your cluster, you can immediately run queries using the console\. 
 
@@ -28,23 +28,23 @@ Using the Amazon Redshift console query editor, you can do the following:
 + Save queries for reuse\. You can't save queries in the Europe \(Paris\) Region or the Asia Pacific \(Osaka\-Local\) Region\.
 + View query execution details for user\-defined tables\.
 
-### Query Editor Considerations<a name="gsg-query-editor-considerations"></a>
+### Query editor considerations<a name="gsg-query-editor-considerations"></a>
 
-For details about considerations when using the query editor, see [Querying a Database Using the Query Editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html) in the Amazon Redshift Cluster Management Guide\.
+For details about considerations when using the query editor, see [Querying a database using the query editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html) in the *Amazon Redshift Cluster Management Guide\.*
 
-### Enabling Access to the Query Editor<a name="gsg-query-cluster-configure"></a>
+### Enabling access to the query editor<a name="gsg-query-cluster-configure"></a>
 
-To access the query editor, you need permission\. To enable access, attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` policies for AWS Identity and Access Management \(IAM\) to the AWS IAM user that you use to access your cluster\.
+To access the query editor, you need permission\. To enable access, attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` policies for AWS Identity and Access Management \(IAM\) to the IAM user that you use to access your cluster\.
 
 If you have already created an IAM user to access Amazon Redshift, you can attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` policies to that user\. If you haven't created an IAM user yet, create one and attach the policies to the IAM user\.
 
-**To attach the required IAM policies for the Query Editor**
+**To attach the required IAM policies for the query editor**
 
 1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 
 1. Choose **Users**\.
 
-1. Choose the user that needs access to the Query Editor\.
+1. Choose the user that needs access to the query editor\.
 
 1. Choose **Add permissions**\.
 
@@ -56,7 +56,7 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 
 1. Choose **Add permissions**\.
 
-### Using the Query Editor<a name="gsg-using-query-editor"></a>
+### Using the query editor<a name="gsg-using-query-editor"></a>
 
  In the following example, you use the query editor to perform the following tasks:
 + Run SQL commands\.
@@ -65,9 +65,9 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 + Download a query result set\.
 
 **Note**  
-A new console is available for Amazon Redshift\. Choose either the **New Console** or the **Original Console** instructions based on the console that you are using\. The **New Console** instructions are open by default\.
+A new console is available for Amazon Redshift\. Choose either the **New console** or the **Original console** instructions based on the console that you are using\. The **New console** instructions are open by default\.
 
-#### New Console<a name="query-editor-getting-started"></a>
+#### New console<a name="query-editor-getting-started"></a>
 
 **To use the query editor**
 
@@ -118,13 +118,13 @@ A new console is available for Amazon Redshift\. Choose either the **New Console
 
 1. Choose **Export** to download the query results as a file\.
 
-#### Original Console<a name="query-editor-getting-started-originalconsole"></a>
+#### Original console<a name="query-editor-getting-started-originalconsole"></a>
 
 **To use the query editor**
 
 1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
 
-1. In the navigation pane, choose **Query Editor**\.
+1. In the navigation pane, choose **Query editor**\.
 
 1. In the **Credentials** dialog box, enter the following values and then choose **Connect**:
    + **Cluster**: Choose **examplecluster**\.
@@ -135,7 +135,7 @@ A new console is available for Amazon Redshift\. Choose either the **New Console
 1. For **Schema**, choose **public **to create a new table based on that schema\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-qe-overview.png)
 
-1. Enter the following in the Query Editor window and choose **Run query** to create a new table\.
+1. Enter the following in the Query editor window and choose **Run query** to create a new table\.
 
    ```
    create table shoes(
@@ -145,7 +145,7 @@ A new console is available for Amazon Redshift\. Choose either the **New Console
 
 1. Choose **Clear**\.
 
-1. Enter the following command in the Query Editor window and choose **Run query** to add rows to the table\.
+1. Enter the following command in the Query editor window and choose **Run query** to add rows to the table\.
 
    ```
    insert into shoes values 
@@ -155,7 +155,7 @@ A new console is available for Amazon Redshift\. Choose either the **New Console
 
 1. Choose **Clear**\.
 
-1. Enter the following command in the Query Editor window and choose **Run query** to query the new table\.
+1. Enter the following command in the Query editor window and choose **Run query** to query the new table\.
 
    ```
    select * from shoes;                                       
@@ -164,23 +164,23 @@ A new console is available for Amazon Redshift\. Choose either the **New Console
    You should see the following results\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-qe-example1.png)
 
-## Querying a Database Using a SQL Client<a name="connect-using-sql-client"></a>
+## Querying a database using a SQL client<a name="connect-using-sql-client"></a>
 
 Next, you connect to your cluster by using a SQL client tool and run a simple query to test the connection\. You can use most SQL client tools that are compatible with PostgreSQL\. For this tutorial, you use the SQL Workbench/J client\.  Complete this section by performing the following steps: 
-+ [Install SQL Client Drivers and Tools](#rs-gsg-sql-client)
-+ [To Get Your Connection String](#rs-gsg-how-to-get-connection-string)
-+ [To Connect from SQL Workbench/J to Your Cluster](#rs-gsg-how-to-connect-from-workbench)
++ [Install SQL client drivers and tools](#rs-gsg-sql-client)
++ [To get your connection string](#rs-gsg-how-to-get-connection-string)
++ [To connect from SQL Workbench/J to your cluster](#rs-gsg-how-to-connect-from-workbench)
 
-After you complete this step, you can determine whether you want to load sample data from Amazon S3 in [Step 6: Load Sample Data from Amazon S3](rs-gsg-create-sample-db.md) or find more information about Amazon Redshift and reset your environment at [Where Do I Go From Here?](rs-gsg-clean-up-tasks.md#rs-gsg-where-do-i-go)\.
+After you complete this step, you can determine whether you want to load sample data from Amazon S3 in [Step 6: Load sample data from Amazon S3](rs-gsg-create-sample-db.md) or find more information about Amazon Redshift and reset your environment at [Where do I go from here?](rs-gsg-clean-up-tasks.md#rs-gsg-where-do-i-go)\.
 
-### Install SQL Client Drivers and Tools<a name="rs-gsg-sql-client"></a>
+### Install SQL client drivers and tools<a name="rs-gsg-sql-client"></a>
 
-You can use most SQL client tools with Amazon Redshift JDBC or ODBC drivers to connect to an Amazon Redshift cluster\. In this tutorial, you connect using SQL Workbench/J, a free, DBMS\-independent, cross\-platform SQL query tool\. If you plan to use SQL Workbench/J to complete this tutorial, use the steps following to set up the Amazon Redshift JDBC driver and SQL Workbench/J\. For more complete instructions for installing SQL Workbench/J, go to [Setting Up the SQL Workbench/J Client](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html) in the *Amazon Redshift Cluster Management Guide*\. If you use an Amazon EC2 instance as your client computer, install SQL Workbench/J and the required drivers on the instance\.
+You can use most SQL client tools with Amazon Redshift JDBC or ODBC drivers to connect to an Amazon Redshift cluster\. In this tutorial, you connect using SQL Workbench/J, a free, DBMS\-independent, cross\-platform SQL query tool\. If you plan to use SQL Workbench/J to complete this tutorial, use the steps following to set up the Amazon Redshift JDBC driver and SQL Workbench/J\. For more complete instructions for installing SQL Workbench/J, go to [Setting up the SQL Workbench/J client](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html) in the *Amazon Redshift Cluster Management Guide*\. If you use an Amazon EC2 instance as your client computer, install SQL Workbench/J and the required drivers on the instance\.
 
 **Note**  
 Install any third\-party database tools that you want to use with your clusters yourself\. Amazon Redshift doesn't provide or install any third\-party tools or libraries\.
 
-#### To Install SQL Workbench/J on Your Client Computer<a name="rs-gsg-how-to-install-sql-client-drivers-and-tools"></a>
+#### To install SQL Workbench/J on your client computer<a name="rs-gsg-how-to-install-sql-client-drivers-and-tools"></a>
 
 1. Review the [SQL Workbench/J software license](http://www.sql-workbench.net/manual/license.html#license-restrictions)\.
 
@@ -190,18 +190,18 @@ Install any third\-party database tools that you want to use with your clusters 
 **Important**  
 Note the Java runtime version prerequisites for SQL Workbench/J and ensure you are using that version\. Otherwise, the client application doesn't run\.
 
-1. Go to [Configure a JDBC Connection](https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html) and download an Amazon Redshift JDBC driver to enable SQL Workbench/J to connect to your cluster\.
+1. Go to [Configure a JDBC connection](https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html) and download an Amazon Redshift JDBC driver to enable SQL Workbench/J to connect to your cluster\.
 
-For more information about using the Amazon Redshift JDBC or ODBC drivers, see [Configuring Connections in Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/mgmt/configuring-connections.html)\.
+For more information about using the Amazon Redshift JDBC or ODBC drivers, see [Configuring connections in Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/mgmt/configuring-connections.html)\.
 
-### To Get Your Connection String<a name="rs-gsg-how-to-get-connection-string"></a>
+### To get your connection string<a name="rs-gsg-how-to-get-connection-string"></a>
 
 To connect to your cluster with your SQL client tool, you need the cluster connection string\. You can find the cluster connection string in the Amazon Redshift console, on a cluster's details page\.
 
 **Note**  
-A new console is available for Amazon Redshift\. Choose either the **New Console** or the **Original Console** instructions based on the console that you are using\. The **New Console** instructions are open by default\.
+A new console is available for Amazon Redshift\. Choose either the **New console** or the **Original console** instructions based on the console that you are using\. The **New console** instructions are open by default\.
 
-#### New Console<a name="connect-drivers-url-getting-started"></a>
+#### New console<a name="connect-drivers-url-getting-started"></a>
 
 **To find the connection string for a cluster**
 
@@ -213,7 +213,7 @@ A new console is available for Amazon Redshift\. Choose either the **New Console
 
 1. Choose **Copy** to copy the string on this page\. 
 
-#### Original Console<a name="connect-drivers-url-getting-started-originalconsole"></a>
+#### Original console<a name="connect-drivers-url-getting-started-originalconsole"></a>
 
 **To find the connection string for a cluster**
 
@@ -226,9 +226,9 @@ A new console is available for Amazon Redshift\. Choose either the **New Console
 The endpoint for your cluster is not available until the cluster is created and in the available state\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-mgmt-clusters-cluster-database-properties-jdbc.png)
 
-### To Connect from SQL Workbench/J to Your Cluster<a name="rs-gsg-how-to-connect-from-workbench"></a>
+### To connect from SQL Workbench/J to your cluster<a name="rs-gsg-how-to-connect-from-workbench"></a>
 
-This step assumes you installed SQL Workbench/J\.
+This step assumes that you installed SQL Workbench/J\.
 
 1. Open SQL Workbench/J\.
 

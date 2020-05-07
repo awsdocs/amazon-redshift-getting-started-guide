@@ -1,9 +1,9 @@
-# Step 4: Authorize Access to the Cluster<a name="rs-gsg-authorize-cluster-access"></a>
+# Step 4: Authorize access to the cluster<a name="rs-gsg-authorize-cluster-access"></a>
 
 **Note**  
-A new console is available for Amazon Redshift\. Choose either the **New Console** or the **Original Console** instructions based on the console that you are using\. The **New Console** instructions are open by default\.
+A new console is available for Amazon Redshift\. Choose either the **New console** or the **Original console** instructions based on the console that you are using\. The **New console** instructions are open by default\.
 
-## New Console<a name="authorize-cluster-sample"></a>
+## New console<a name="authorize-cluster-sample"></a>
 
 Later in this tutorial, you access your cluster from within a VPC\. However, if you use an SQL client from outside your firewall to access the cluster, you must grant inbound access\. 
 
@@ -15,7 +15,7 @@ You can skip this step if you plan to access the cluster with the Amazon Redshif
 
 1. To access from an Amazon EC2 external client, add an ingress rule to the security group attached to your cluster that allows inbound traffic\. You add Amazon EC2 security group rules in the Amazon EC2 console\. For example, a CIDR/IP of 192\.0\.2\.0/24 allows clients in that IP address range to connect to your cluster\. You need to find out the correct CIDR/IP for your environment\.
 
-## Original Console<a name="rs-gsg-how-to-authorize-access-vpc-security-group"></a>
+## Original console<a name="rs-gsg-how-to-authorize-access-vpc-security-group"></a>
 
 In the previous step, you launched your Amazon Redshift cluster\. Before you can connect to the cluster, you need to configure a security group to authorize access\.  
 

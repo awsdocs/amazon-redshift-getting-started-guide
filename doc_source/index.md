@@ -14,12 +14,12 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [Getting Started with Amazon Redshift](getting-started.md)
-   + [Step 1: Set Up Prerequisites](rs-gsg-prereq.md)
-   + [Step 2: Create an IAM Role](rs-gsg-create-an-iam-role.md)
-   + [Step 3: Create a Sample Amazon Redshift Cluster](rs-gsg-launch-sample-cluster.md)
-   + [Step 4: Authorize Access to the Cluster](rs-gsg-authorize-cluster-access.md)
-   + [Step 5: Connect to the Sample Cluster and Run Queries](rs-gsg-connect-to-cluster.md)
-   + [Step 6: Load Sample Data from Amazon S3](rs-gsg-create-sample-db.md)
-   + [Step 7: Find Additional Resources and Reset Your Environment](rs-gsg-clean-up-tasks.md)
-+ [Document History](document-history.md)
++ [Getting started with Amazon Redshift](getting-started.md)
+   + [Step 1: Set up prerequisites](rs-gsg-prereq.md)
+   + [Step 2: Create an IAM role](rs-gsg-create-an-iam-role.md)
+   + [Step 3: Create a sample Amazon Redshift cluster](rs-gsg-launch-sample-cluster.md)
+   + [Step 4: Authorize access to the cluster](rs-gsg-authorize-cluster-access.md)
+   + [Step 5: Connect to the sample cluster and run queries](rs-gsg-connect-to-cluster.md)
+   + [Step 6: Load sample data from Amazon S3](rs-gsg-create-sample-db.md)
+   + [Step 7: Find additional resources and reset your environment](rs-gsg-clean-up-tasks.md)
++ [Document history](document-history.md)
