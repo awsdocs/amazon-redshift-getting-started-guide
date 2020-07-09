@@ -21,8 +21,6 @@ If you use IAM user credentials, ensure that you have the necessary permissions 
 1. On the navigation menu, choose **CLUSTERS**, then choose **Create cluster**\. The **Create cluster** page appears\.
 
 1. Choose **dc2\.large** for the node type in the **Compute optimized** section\. For **Nodes**, choose **2**\. 
-**Note**  
-When you are creating a cluster for your data, you can use the Amazon Redshift console to help configure your cluster\. To do this, choose **Calculate the best configuration for your needs**\. When you do, a section of the page is replaced with controls for you to enter the size of your compressed data\. Confirm the defaults and then choose **Select this configuration**\. Your cluster configuration is displayed\. 
 
 1. In the **Cluster details** section, specify values for **Cluster identifier**, **Database port**, **Master user name**, and **Master user password**\. This tutorial uses these values: 
    + **Cluster identifier**: Enter **examplecluster**\.
