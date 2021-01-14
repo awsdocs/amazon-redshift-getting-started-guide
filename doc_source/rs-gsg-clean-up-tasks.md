@@ -4,6 +4,8 @@ When you have completed this tutorial, you can go to other Amazon Redshift resou
 
 ## Where do I go from here?<a name="rs-gsg-where-do-i-go"></a>
 
+
+
 ### Additional resources<a name="rs-gsg-additional-resources"></a>
 
 We recommend that you continue to learn more about the concepts introduced in this guide with the following resources: 

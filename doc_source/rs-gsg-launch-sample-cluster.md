@@ -84,3 +84,4 @@ Quick launch uses the default virtual private cloud \(VPC\) for your AWS Region\
 
 1. On the **Clusters** page, choose the cluster that you just launched, choose the **Cluster** button, then **Modify cluster**\. Choose the **VPC security groups** to associate with this cluster, then choose **Modify** to make the association\. Make sure that the **Cluster Properties** displays the **VPC security groups** you chose before continuing to the next step\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/gsg-modify-cluster.png)
+

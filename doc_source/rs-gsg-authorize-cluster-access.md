@@ -39,3 +39,4 @@ In the previous step, you launched your Amazon Redshift cluster\. Before you can
 **Important**  
 Using 0\.0\.0\.0/0 is not recommended for anything other than demonstration purposes because it allows access from any computer on the internet\. In a real environment, you create inbound rules based on your own network settings\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-gsg-security-vpc-security-group-authorize.png)
+

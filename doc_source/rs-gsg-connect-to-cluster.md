@@ -19,6 +19,7 @@ The following cluster node types support the query editor:
 + DC2\.large
 + DC2\.8xlarge
 + DS2\.8xlarge
++ RA3\.xlplus
 + RA3\.4xlarge
 + RA3\.16xlarge
 
@@ -225,6 +226,8 @@ A new console is available for Amazon Redshift\. Choose either the **New console
 **Note**  
 The endpoint for your cluster is not available until the cluster is created and in the available state\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/rs-mgmt-clusters-cluster-database-properties-jdbc.png)
+
+
 
 ### To connect from SQL Workbench/J to your cluster<a name="rs-gsg-how-to-connect-from-workbench"></a>
 
