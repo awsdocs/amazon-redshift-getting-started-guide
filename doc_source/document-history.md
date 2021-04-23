@@ -7,6 +7,7 @@ The following table describes the important changes since the last release of th
 
 | Change | Description | Release date | 
 | --- | --- | --- | 
+|  Documentation update  |  Updated the guide to remove the original Amazon Redshift console and improve step flow\.  | August 14, 2020 | 
 |  New console  |  Updated the guide to describe the new Amazon Redshift console\.  |  November 11, 2019  | 
 |  New feature  |  Updated the guide to describe the quick\-launch cluster procedure\.  |  August 10, 2018  | 
 |  New feature  |  Updated the guide to launch clusters from the Amazon Redshift dashboard\.  |  July 28, 2015  | 

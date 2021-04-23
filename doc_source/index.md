@@ -1,7 +1,7 @@
 # Amazon Redshift Getting Started Guide
 
 -----
-*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -19,7 +19,9 @@ Amazon's trademarks and trade dress may not be used in
    + [Step 2: Create an IAM role](rs-gsg-create-an-iam-role.md)
    + [Step 3: Create a sample Amazon Redshift cluster](rs-gsg-launch-sample-cluster.md)
    + [Step 4: Authorize access to the cluster](rs-gsg-authorize-cluster-access.md)
-   + [Step 5: Connect to the sample cluster and run queries](rs-gsg-connect-to-cluster.md)
+   + [Step 5: Grant access to the query editor and run queries](rs-gsg-connect-to-cluster.md)
    + [Step 6: Load sample data from Amazon S3](rs-gsg-create-sample-db.md)
-   + [Step 7: Find additional resources and reset your environment](rs-gsg-clean-up-tasks.md)
+   + [Step 7: Try example queries](rs-gsg-try-query.md)
+   + [Step 8: Reset your environment](rs-gsg-clean-up-tasks.md)
+   + [Additional resources](rs-gsg-additional-resources.md)
 + [Document history](document-history.md)
