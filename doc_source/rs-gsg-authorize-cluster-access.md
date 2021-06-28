@@ -1,4 +1,4 @@
-# Step 4: Authorize access to the cluster<a name="rs-gsg-authorize-cluster-access"></a>
+# Step 3: Configure inbound rules for SQL clients<a name="rs-gsg-authorize-cluster-access"></a>
 
 ## <a name="authorize-cluster-sample"></a>
 

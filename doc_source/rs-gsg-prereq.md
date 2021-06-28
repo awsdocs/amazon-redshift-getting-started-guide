@@ -1,4 +1,4 @@
-# Step 1: Set up prerequisites<a name="rs-gsg-prereq"></a>
+# Prerequisites<a name="rs-gsg-prereq"></a>
 
 Before you begin setting up an Amazon Redshift cluster, make sure that you complete the following prerequisites:
 + [Sign up for AWS](#rs-gsg-prereq-signup)
@@ -18,4 +18,6 @@ If you don't already have an AWS account, sign up for one\. If you already have 
 
 As part of this tutorial, you specify a port when you launch your Amazon Redshift cluster\. You also create an inbound ingress rule in a security group to allow access through the port to your cluster\.
 
-If your client computer is behind a firewall, make sure that you know an open port that you can use\. Using this open port, you can connect to the cluster from a SQL client tool and run queries\. If you don't know this, work with someone who understands your network firewall rules to determine an open port in your firewall\. Though Amazon Redshift uses port 5439 by default, the connection doesn't work if that port isn't open in your firewall\. You can't change the port number for your Amazon Redshift cluster after it is created\. Thus, make sure that you specify an open port that works in your environment during the launch process\.
+If your client computer is behind a firewall, make sure that you know an open port that you can use\. Using this open port, you can connect to the cluster from a SQL client tool and run queries\. If you don't know this, work with someone who understands your network firewall rules to determine an open port in your firewall\. Though Amazon Redshift uses port 5439 by default, the connection doesn't work if that port isn't open in your firewall\. You can't change the port number for your Amazon Redshift cluster after it's created\. Thus, make sure that you specify an open port that works in your environment during the launch process\.
+
+This prerequisite is only applicable when you bring your own data to Amazon Redshift\. For more information, see [Bringing your own data to Amazon Redshift](bring-own-data.md)\.

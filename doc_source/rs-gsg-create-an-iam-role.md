@@ -1,4 +1,4 @@
-# Step 2: Create an IAM role<a name="rs-gsg-create-an-iam-role"></a>
+# Step 1: Create an IAM role<a name="rs-gsg-create-an-iam-role"></a>
 
 For any operation that accesses data on another AWS resource, your cluster needs permission to access the resource and the data on the resource on your behalf\. An example is using a COPY command to load data from Amazon S3\. You provide those permissions by using AWS Identity and Access Management \(IAM\)\. You can do this through an IAM role that is attached to your cluster\. Or you can provide the AWS access key for an IAM user that has the necessary permissions\. For more information about credentials and access permissions, see [Credentials and access permissions](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-access-permissions.html)\. 
 
@@ -16,7 +16,7 @@ In this step, you create a new IAM role that enables Amazon Redshift to load dat
 
 1. Choose **Create role**\.
 
-1. In the **AWS Service** group, choose **Redshift\.** 
+1. In the **AWS Service** group, choose **Redshift**\. 
 
 1. Under **Select your use case**, choose **Redshift \- Customizable**, then choose **Next: Permissions**\.
 
@@ -30,6 +30,6 @@ In this step, you create a new IAM role that enables Amazon Redshift to load dat
 
 1. Choose the role name of the role that you just created\.
 
-1. Copy the **Role ARN** value to your clipboard—this value is the Amazon Resource Name \(ARN\) for the role that you just created\. You use that value when you use the COPY command to load data in [Step 6: Load sample data from Amazon S3](rs-gsg-create-sample-db.md)\.
+1. Copy the **Role ARN** value to your clipboard—this value is the Amazon Resource Name \(ARN\) for the role that you just created\. You use that value when you use the COPY command to load data in [Step 5: Load sample data from Amazon S3](rs-gsg-create-sample-db.md)\.
 
 Now that you have created the new role, your next step is to attach it to your cluster\. You can attach the role when you launch a new cluster or you can attach it to an existing cluster\. In the next step, you attach the role to a new cluster\.

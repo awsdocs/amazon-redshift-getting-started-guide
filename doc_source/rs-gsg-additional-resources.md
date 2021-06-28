@@ -16,7 +16,7 @@ When you have completed this tutorial, we recommend that you continue to learn m
   + [Loading data from Amazon Simple Storage Service](https://docs.aws.amazon.com/redshift/latest/dg/tutorial-loading-data.html): This tutorial describes how to load data into your Amazon Redshift database tables from data files in an Amazon Simple Storage Service bucket\. 
   + [Querying nested data with Amazon Redshift Spectrum](https://docs.aws.amazon.com/redshift/latest/dg/tutorial-query-nested-data.html): This tutorial describes how to use Redshift Spectrum to query nested data in Parquet, ORC, JSON, and Ion file formats using external tables\.
   + [Configuring manual workload management \(WLM\) queues](https://docs.aws.amazon.com/redshift/latest/dg/tutorial-configuring-workload-management.html): This tutorial describes how to configure manual workload management \(WLM\) in Amazon Redshift\. 
-+ Feature videos:
++ Feature videos: These videos help you learn about Amazon Redshift features\.
   + To learn how to federate Amazon Redshift access with Microsoft Azure AD single sign\-on, watch the following video\.   
 [![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/aXs9hEgJCss/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/aXs9hEgJCss)
   + To learn how to create and monitor usage limits using the Amazon Redshift console, watch the following video\.   

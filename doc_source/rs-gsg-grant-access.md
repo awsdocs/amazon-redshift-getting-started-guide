@@ -1,4 +1,4 @@
-# Step 5: Grant access to the query editor and run queries<a name="rs-gsg-connect-to-cluster"></a>
+# Step 4: Grant access to the query editor and run queries<a name="rs-gsg-grant-access"></a>
 
  To query databases hosted by your Amazon Redshift cluster, you have two options:
 + Connect to your cluster and run queries on the AWS Management Console with the query editor\. 
@@ -14,7 +14,7 @@ Using the Amazon Redshift query editor is the easiest way to run queries on data
 
 ## Grant access to the query editor<a name="gsg-query-cluster-configure"></a>
 
-To access the Amazon Redshift query editor, you need permission\. To enable access, attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` IAM policies to the IAM user that you use to access your cluster\.
+To use the Amazon Redshift query editor, you need permission\. To enable access, attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` IAM policies to the IAM user that you use to access your cluster\.
 
 If you have already created an IAM user to access Amazon Redshift, you can attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` policies to that user\. If you haven't created an IAM user yet, create one and attach the policies to the IAM user\.
 
@@ -30,7 +30,7 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 
 1. Choose **Attach existing policies directly**\.
 
-1. For **Policy names**, choose **AmazonRedshiftQueryEditor** and **AmazonRedshiftReadOnlyAccess**\.
+1. For **Policy name**, choose **AmazonRedshiftQueryEditor** and **AmazonRedshiftReadOnlyAccess**\.
 
 1. Choose **Next: Review**\.
 
@@ -59,7 +59,7 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 
    Then choose **Connect**\. 
 
-1. For **Schema**, choose **public **to create a new table based on that schema\.
+1. For **Schema**, choose **public**\.
 
 1. Enter the following in the query editor window, and choose **Run** to create a new table\.
 
@@ -88,7 +88,7 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
    ```
 
    The **Query results** displays the results\.    
-[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html)
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-grant-access.html)
 
 1. Choose **Execution** to view the run details\.
 

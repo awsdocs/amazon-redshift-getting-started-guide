@@ -1,4 +1,4 @@
-# Step 6: Load sample data from Amazon S3<a name="rs-gsg-create-sample-db"></a>
+# Step 5: Load sample data from Amazon S3<a name="rs-gsg-create-sample-db"></a>
 
 At this point, you have a database called `dev` and you are connected to it\. Next, you create some tables in the database, upload data to the tables, and try a query\. For your convenience, the sample data that you load is available in an Amazon S3 bucket\. 
 
@@ -6,9 +6,12 @@ At this point, you have a database called `dev` and you are connected to it\. Ne
 If you're using a SQL client tool, ensure that your SQL client is connected to the cluster\.
 
 After you complete this step, you can do the following:
-+ Try example queries at [Step 7: Try example queries](rs-gsg-try-query.md)\. 
-+ Reset your environment at [Step 8: Reset your environment](rs-gsg-clean-up-tasks.md)\.
++ Try example queries at [Step 6: Try example queries using the query editor](rs-gsg-try-query.md)\. 
++ Reset your environment at [Step 7: Reset your environment](rs-gsg-clean-up-tasks.md)\.
 + Find more information about Amazon Redshift at [Additional resources](rs-gsg-additional-resources.md)\.
+
+**Note**  
+To try querying data in the query editor without loading your own data, choose **Load sample data** in **Sample data**\. If you do, Amazon Redshift loads its sample dataset to your Amazon Redshift cluster automatically during cluster creation\.
 
 **To load sample data from Amazon S3**
 
@@ -113,7 +116,7 @@ We recommend using the COPY command to load large datasets into Amazon Redshift 
 
    1.  Edit the COPY commands in this tutorial to point to the files in your Amazon S3 bucket\. For information about how to manage files with Amazon S3, see [Creating and configuring an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
 
-   1. Provide authentication for your cluster to access Amazon S3 on your behalf to load the sample data\. You can provide either role\-based authentication or key\-based authentication\. We recommend using role\-based authentication\. You can use the **myRedshiftRole** IAM role that you created at [Step 2: Create an IAM role](rs-gsg-create-an-iam-role.md) to enable Amazon Redshift to load data from Amazon S3 buckets\. For more information about both types of authentication, see [CREDENTIALS](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-credentials.html) in the *Amazon Redshift Database Developer Guide\.*
+   1. Provide authentication for your cluster to access Amazon S3 on your behalf to load the sample data\. You can provide either role\-based authentication or key\-based authentication\. We recommend using role\-based authentication\. You can use the **myRedshiftRole** IAM role that you created at [Step 1: Create an IAM role](rs-gsg-create-an-iam-role.md) to enable Amazon Redshift to load data from Amazon S3 buckets\. For more information about both types of authentication, see [CREDENTIALS](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-credentials.html) in the *Amazon Redshift Database Developer Guide\.*
 
       For this step, you provide authentication by referencing the IAM role that you created and then attached to your cluster in previous steps\.
 **Note**  
@@ -127,7 +130,7 @@ If you don't have proper permissions to access Amazon S3, you receive the follow
       delimiter '|' region '<aws-region>';
       ```
 
-      To authorize access using an IAM role, replace `<iam-role-arn>` in the CREDENTIALS parameter string with the role ARN for the IAM role that you created in [Step 2: Create an IAM role](rs-gsg-create-an-iam-role.md)\.
+      To authorize access using an IAM role, replace `<iam-role-arn>` in the CREDENTIALS parameter string with the role ARN for the IAM role that you created in [Step 1: Create an IAM role](rs-gsg-create-an-iam-role.md)\.
 
        Your COPY command looks similar to the following example\. 
 

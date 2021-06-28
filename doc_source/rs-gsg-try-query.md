@@ -1,4 +1,4 @@
-# Step 7: Try example queries<a name="rs-gsg-try-query"></a>
+# Step 6: Try example queries using the query editor<a name="rs-gsg-try-query"></a>
 
 Now, try some example queries, as shown following\. For more information on working with the SELECT command, see [SELECT](https://docs.aws.amazon.com/redshift/latest/dg/r_SELECT_synopsis.html) in the *Amazon Redshift Developer Guide*\.
 
@@ -33,3 +33,5 @@ FROM  (SELECT eventid, total_price, ntile(1000) over(order by total_price desc) 
        AND percentile = 1
 ORDER BY total_price desc;
 ```
+
+You have successfully created an Amazon Redshift cluster and queried data from your own dataset using the Amazon Redshift query editor\.
