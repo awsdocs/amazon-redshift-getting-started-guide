@@ -1,10 +1,10 @@
 # Step 1: Create an IAM role<a name="rs-gsg-create-an-iam-role"></a>
 
-For any operation that accesses data on another AWS resource, your cluster needs permission to access the resource and the data on the resource on your behalf\. An example is using a COPY command to load data from Amazon S3\. You provide those permissions by using AWS Identity and Access Management \(IAM\)\. You can do this through an IAM role that is attached to your cluster\. Or you can provide the AWS access key for an IAM user that has the necessary permissions\. For more information about credentials and access permissions, see [Credentials and access permissions](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-access-permissions.html)\. 
+For any operation that accesses data from another AWS resource, your cluster needs permission to access the resource and the data on the resource on your behalf\. An example is using a COPY command to load data from Amazon Simple Storage Service \(Amazon S3\)\. You provide those permissions by using AWS Identity and Access Management \(IAM\)\. You can do this through an IAM role that is attached to your cluster\. Or you can provide the AWS access key for an IAM user that has the necessary permissions\. For more information about credentials and access permissions, see [Credentials and access permissions](https://docs.aws.amazon.com/redshift/latest/dg/loading-data-access-permissions.html)\. 
 
 To best protect your sensitive data and safeguard your AWS access credentials, we recommend creating an IAM role and attaching it to your cluster\. For more information about providing access permissions, see [Permissions to access other AWS resources](https://docs.aws.amazon.com/redshift/latest/dg/copy-usage_notes-access-permissions.html)\.
 
-In this step, you create a new IAM role that enables Amazon Redshift to load data from Amazon S3 buckets\. An IAM role is an IAM identity that you can create in your account that has specific permissions\. In the next step, you attach the role to your cluster\.
+In this step, you create a new IAM role that allows Amazon Redshift to load data from Amazon S3 buckets\. An IAM role is an IAM identity that you can create in your account that has specific permissions\. In the next step, you attach the role to your cluster\.
 
 ## <a name="rs-gsg-how-to-create-an-iam-role"></a>
 

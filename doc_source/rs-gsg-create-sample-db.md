@@ -8,7 +8,7 @@ If you're using a SQL client tool, ensure that your SQL client is connected to t
 After you complete this step, you can do the following:
 + Try example queries at [Step 6: Try example queries using the query editor](rs-gsg-try-query.md)\. 
 + Reset your environment at [Step 7: Reset your environment](rs-gsg-clean-up-tasks.md)\.
-+ Find more information about Amazon Redshift at [Additional resources](rs-gsg-additional-resources.md)\.
++ Find more information about Amazon Redshift at [Additional resources](additional-resources.md)\.
 
 **Note**  
 To try querying data in the query editor without loading your own data, choose **Load sample data** in **Sample data**\. If you do, Amazon Redshift loads its sample dataset to your Amazon Redshift cluster automatically during cluster creation\.
@@ -108,7 +108,7 @@ To try querying data in the query editor without loading your own data, choose *
 
 1.  Load sample data from Amazon S3 by using the COPY command\.
 **Note**  
-We recommend using the COPY command to load large datasets into Amazon Redshift from Amazon S3 or DynamoDB\. For more information about COPY syntax, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the *Amazon Redshift Database Developer Guide*\. 
+We recommend using the COPY command to load large datasets into Amazon Redshift from Amazon S3 or Amazon DynamoDB\. For more information about COPY syntax, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the *Amazon Redshift Database Developer Guide*\. 
 
    1. Download the file [tickitdb\.zip](samples/tickitdb.zip), which contains individual sample data files\.
 
@@ -116,7 +116,7 @@ We recommend using the COPY command to load large datasets into Amazon Redshift 
 
    1.  Edit the COPY commands in this tutorial to point to the files in your Amazon S3 bucket\. For information about how to manage files with Amazon S3, see [Creating and configuring an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
 
-   1. Provide authentication for your cluster to access Amazon S3 on your behalf to load the sample data\. You can provide either role\-based authentication or key\-based authentication\. We recommend using role\-based authentication\. You can use the **myRedshiftRole** IAM role that you created at [Step 1: Create an IAM role](rs-gsg-create-an-iam-role.md) to enable Amazon Redshift to load data from Amazon S3 buckets\. For more information about both types of authentication, see [CREDENTIALS](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-credentials.html) in the *Amazon Redshift Database Developer Guide\.*
+   1. Provide authentication for your cluster to access Amazon S3 on your behalf to load the sample data\. You can provide either role\-based authentication or key\-based authentication\. We recommend using role\-based authentication\. You can use the **myRedshiftRole** IAM role that you created at [Step 1: Create an IAM role](rs-gsg-create-an-iam-role.md) to allow Amazon Redshift to load data from Amazon S3 buckets\. For more information about both types of authentication, see [CREDENTIALS](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-credentials.html) in the *Amazon Redshift Database Developer Guide\.*
 
       For this step, you provide authentication by referencing the IAM role that you created and then attached to your cluster in previous steps\.
 **Note**  
@@ -132,7 +132,7 @@ If you don't have proper permissions to access Amazon S3, you receive the follow
 
       To authorize access using an IAM role, replace `<iam-role-arn>` in the CREDENTIALS parameter string with the role ARN for the IAM role that you created in [Step 1: Create an IAM role](rs-gsg-create-an-iam-role.md)\.
 
-       Your COPY command looks similar to the following example\. 
+       Your COPY command should look similar to the following example\. 
 
       ```
       copy users from 's3://<myBucket>/tickit/allusers_pipe.txt' 

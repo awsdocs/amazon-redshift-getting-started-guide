@@ -1,10 +1,8 @@
 # Step 2: Create a sample Amazon Redshift cluster<a name="rs-gsg-launch-sample-cluster"></a>
 
-Now that you have the prerequisites completed, you can launch your Amazon Redshift cluster\.
+After you have the prerequisites completed, you can launch an Amazon Redshift cluster\.
 
 The cluster that you are about to create is live \(and not running in a sandbox\)\. You incur the standard Amazon Redshift usage fees for the cluster until you delete it\. If you complete the tutorial described here in one sitting and delete the cluster when you are finished, the total charges are minimal\. 
-
-## <a name="create-cluster-sample"></a>
 
 **To create an Amazon Redshift cluster**
 
@@ -12,26 +10,24 @@ The cluster that you are about to create is live \(and not running in a sandbox\
 **Important**  
 If you use IAM user credentials, ensure that you have the necessary permissions to perform the cluster operations\. For more information, see [Controlling access to IAM users](https://docs.aws.amazon.com/redshift/latest/mgmt/iam-redshift-user-mgmt.html) in the *Amazon Redshift Cluster Management Guide*\.
 
-1. At upper right, choose the AWS Region in which you want to create the cluster\. 
+1. At upper right, choose the AWS Region where you want to create the cluster\. 
 
 1. On the navigation menu, choose **CLUSTERS**, then choose **Create cluster**\. The **Create cluster** page appears\.
 
-1. In the **Cluster configuration** section, specify values for **Cluster identifier**, **Node type**, and **Nodes**: 
-   + **Cluster identifier**: Enter **examplecluster** for this tutorial\. This identifier must be unique\. The identifier must be from 1–63 characters using as valid characters a–z \(lowercase only\) and \- \(hyphen\)\. 
-   + Choose one of the following methods to size your cluster:
-**Note**  
-The following step describes an Amazon Redshift console that is running in an AWS Region that supports RA3 node types\. For a list of AWS Regions that support RA3 node types, see [Overview of RA3 node types](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-ra3-node-types) in the *Amazon Redshift Cluster Management Guide*\.
-     + If your AWS Region supports RA3 node types, choose either **Production** or **Free trial** to answer the question **What are you planning to use this cluster for?** 
+1. In the **Cluster configuration** section, specify values for **Cluster identifier**, **Node type**, **Nodes**, and how you plan to use the cluster: 
+   + **For Cluster identifier**, enter **examplecluster** for this tutorial\. This identifier must be unique\. The identifier must be from 1–63 characters using as valid characters a–z \(lowercase only\) and \- \(hyphen\)\. 
+   + To answer the question **What are you planning to use this cluster for?** choose **Free trial** or **Production**: 
+     + **Free trial** – If your organization is eligible, you might be able to create a cluster under the Amazon Redshift free trial program\. For information about creating clusters using the free trial program, see [Using a sample dataset](sample-data-load.md)\. 
 
-       When you choose **Production**, do one of the following:
+       To do this, choose **Free trial** to create a configuration with the dc2\.large node type\. For more information about choosing a free trial, see [Amazon Redshift free trial](http://aws.amazon.com/redshift/free-trial/)\. 
+     + **Production** – For production use, you have two options:
 
-       If your organization is eligible, you might be able to create a cluster under the Amazon Redshift free trial program\. For information about creating clusters using the free trial program, see [Using a sample dataset](sample-data-load.md)\. To do this, choose **Free trial** to create a configuration with the dc2\.large node type\. For more information about choosing a free trial, see [Amazon Redshift free trial](http://aws.amazon.com/redshift/free-trial/)\. 
-     + If you don't know how large to size your cluster, choose **Help me choose**\. Doing this starts a sizing calculator that asks you questions about the size and query characteristics of the data that you plan to store in your data warehouse\. 
+       Choose **Help me choose** if you don't know how large to size your cluster\. Doing this starts a sizing calculator that asks you questions about the size and query characteristics of the data that you plan to store in your data warehouse\. 
 
-       If you know the required size of your cluster \(that is, the node type and number of nodes\), choose **I'll choose**\. Then choose the **Node type** and number of **Nodes** to size your cluster for the proof of concept\.
+       Choose **I'll choose** if you know the required size of your cluster \(that is, the node type and number of nodes\)\. Then choose a **Node type** value and number for **Nodes** to size your cluster\.
    + Choose **Node type**: **dc2\.large** with **Nodes**: **2** for this tutorial\.
    + If you have chosen **Production** for your cluster, then do one of the following:
-     + To use the sample dataset Amazon Redshift provides, in **Sample data**, choose **Load sample data**\. Amazon Redshift loads the sample dataset Tickit to the default `dev` database and `public` schema\.
+     + To use the sample dataset that Amazon Redshift provides, in **Sample data**, choose **Load sample data**\. Amazon Redshift loads the sample dataset Tickit to the default `dev` database and `public` schema\.
      + To bring your own data to Amazon Redshift, continue with the rest of the tutorial\.
 
 1. In the **Database configuration** section, specify values for **Database name \(optional\)**, **Database port \(optional\)**, **Admin user name**, and **Admin user password**\. Or choose **Generate password** to use a password generated by Amazon Redshift\.
@@ -47,5 +43,7 @@ The following step describes an Amazon Redshift console that is running in an AW
    If you created your cluster with the **Load sample data** option, associate an IAM role to the cluster\.
 
 1. \(Optional\) In the **Additional configurations** section, turn off **Use defaults** to modify **Network and security**, **Database configuration**, **Maintenance**, **Monitoring**, and **Backup** settings\.
+
+   If you create your cluster with the **Load sample data** option and want to turn on enhanced Amazon VPC routing, the cluster in your Amazon VPC requires access to the Amazon S3 endpoint in order for data to be loaded\. You can make the cluster publicly accessible, configure a NAT in your Amazon VPC for the cluster to access the internet, or configure a Amazon S3 VPCE in your Amazon VPC\. For more information about enhanced Amazon VPC routing, see [Enabling enhanced Amazon VPC routing](https://docs.aws.amazon.com/redshift/latest/mgmt/enhanced-vpc-enabling-cluster.html) in the *Amazon Redshift Cluster Management Guide*\.
 
 1. Choose **Create cluster**\. 

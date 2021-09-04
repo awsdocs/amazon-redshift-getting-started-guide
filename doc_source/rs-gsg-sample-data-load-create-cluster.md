@@ -1,10 +1,8 @@
 # Step 1: Create an Amazon Redshift cluster<a name="rs-gsg-sample-data-load-create-cluster"></a>
 
-Now that you have the prerequisites completed, you can start creating your Amazon Redshift cluster\.
+When you have the prerequisites completed, you can start creating your Amazon Redshift cluster, based on a sample dataset\.
 
-## <a name="create-cluster-sample"></a>
-
-**To create an Amazon Redshift cluster**
+**To create an Amazon Redshift cluster based on a sample dataset**
 
 1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
 
@@ -19,14 +17,14 @@ Now that you have the prerequisites completed, you can start creating your Amazo
 
 1. If your organization is eligible, you might be able to create a cluster under the Amazon Redshift free trial program\. To do this, choose **Free trial** to create a configuration with the dc2\.large node type\. For more information about choosing a free trial, see [Amazon Redshift free trial](http://aws.amazon.com/redshift/free-trial/)\. 
 
-   The console displays your selection, as shown in the example following\.  
+   The console displays your selection, as shown in the screenshot following\.  
 ![\[Console showing selection of a free trial\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/free-trial.png)
 
-   If you then choose another node type, your organization won't be eligible for the free trial\. 
+   If you later choose another node type, your organization is no longer eligible for the free trial\. 
 
    After you choose your node type, do one of the following:
    + In **Sample data**, choose **Load sample data** to load the sample dataset to your Amazon Redshift cluster\. Amazon Redshift loads the sample dataset Tickit to the default `dev` database and `public` schema\. You can start using the query editor to query data\. 
-   + To bring your own data to your Amazon Redshift cluster, choose **Production**\. Then in **Sample data**, choose **Load sample data**\. For information about bringing your own data, see [Bringing your own data to Amazon Redshift](bring-own-data.md)\.
+   + To bring your own data to your Amazon Redshift cluster, choose **Production**\. Then, in **Sample data**, choose **Load sample data**\. For information about bringing your own data, see [Bringing your own data to Amazon Redshift](bring-own-data.md)\.
 
    Amazon Redshift automatically loads the sample dataset to your sample Amazon Redshift cluster\.
 
@@ -38,8 +36,6 @@ Now that you have the prerequisites completed, you can start creating your Amazo
 
 1. Choose **Create cluster**\. 
 
-This tutorial uses the Amazon Redshift query editor, which you can use to query data immediately as Amazon Redshift connects your new cluster to the query editor during cluster creation\. Cluster creation might take a few minutes to complete\. After creation completes, the cluster status becomes ACTIVE\.
-
-When Amazon Redshift is creating your Amazon Redshift cluster with the load sample data option, it automatically uploads the sample dataset Tickit\. Go to the query editor and view the sample Tickit tables by choosing the `dev` database and `public` schema\.
+This tutorial uses the Amazon Redshift query editor\. You can use this editor to query data immediately, when Amazon Redshift connects your new cluster to the query editor during cluster creation\.
 
 You can also choose other SQL client tools that support JDBC or ODBC drivers to work with data in your cluster\. For more information, see [Connecting to an Amazon Redshift cluster using SQL client tools](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-to-cluster.html) in the *Amazon Redshift Cluster Management Guide*\.

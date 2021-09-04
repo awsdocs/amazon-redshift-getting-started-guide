@@ -1,6 +1,8 @@
 # Step 2: Try example queries using the query editor<a name="rs-gsg-sample-data-load-query"></a>
 
-After the Amazon Redshift cluster is created, in **Connect to Amazon Redshift clusters**, choose **Query data**\.  
+When Amazon Redshift is creating your Amazon Redshift cluster, it automatically uploads the sample dataset Tickit\. Cluster creation might take a few minutes to complete\. After creation completes, the cluster status becomes ACTIVE\. You can view the sample Tickit tables in the query editor by choosing the `dev` database and `public` schema\.
+
+After the Amazon Redshift cluster is created, in **Connect to Amazon Redshift clusters**, choose **Query data**\. 
 
 ![\[Screenshot of the console: Query data under Connect to Amazon Redshift clusters\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/sample-data-load.png)
 
@@ -8,7 +10,7 @@ The Amazon Redshift query editor appears\. Amazon Redshift establishes connectio
 
 By default, Amazon Redshift shows the database created during cluster creation in **Select database** and the default schema named `public`\. To view the individual data files of the sample dataset, go to the query editor and choose the `dev` database and `public` schema\.
 
-Try some example queries in the query editor, as shown following\. For more information on working with the SELECT command, see [SELECT](https://docs.aws.amazon.com/redshift/latest/dg/r_SELECT_synopsis.html) in the *Amazon Redshift Developer Guide*\.
+Try some example queries in the query editor, as shown following\. For more information on working with the SELECT command, see [SELECT](https://docs.aws.amazon.com/redshift/latest/dg/r_SELECT_synopsis.html) in the Amazon Redshift Database Developer Guide\.
 
 ```
 -- Find total sales on a given calendar date.
@@ -41,6 +43,6 @@ FROM  (SELECT eventid, total_price, ntile(1000) over(order by total_price desc) 
 ORDER BY total_price desc;
 ```
 
-After you complete the steps in this tutorial, you can use [Additional resources](rs-gsg-additional-resources.md) to find more in\-depth information\. This information can help you plan, deploy, and maintain your clusters, and work with the data in your data warehouse\. 
+After you complete the steps in this tutorial, you can use [Additional resources](additional-resources.md) to find more in\-depth information\. This information can help you plan, deploy, and maintain your clusters, and work with the data in your data warehouse\. 
 
 You can also try the [Bringing your own data to Amazon Redshift](bring-own-data.md) tutorial to create a cluster with your own dataset\.

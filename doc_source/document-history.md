@@ -1,12 +1,13 @@
 # Document history<a name="document-history"></a>
 
-The following table describes the important changes since the last release of the *Amazon Redshift Getting Started Guide*\.
+The following table describes the important changes for the *Amazon Redshift Getting Started Guide*\.
 
-**Latest documentation update: June 4, 2021**
+**Latest documentation update: June 30, 2021**
 
 
 | Change | Description | Release date | 
 | --- | --- | --- | 
+|   Documentation update  | Updated the guide to include new sections about getting started with common database tasks, querying your data lake, querying data on remote sources, sharing data, and training machine learning models with Amazon Redshift data\. | June 30, 2021 | 
 |  New feature  |  Updated the guide to describe the new sample load procedure\.  | June 4, 2021 | 
 |  Documentation update  |  Updated the guide to remove the original Amazon Redshift console and improve step flow\.  | August 14, 2020 | 
 |  New console  |  Updated the guide to describe the new Amazon Redshift console\.  |  November 11, 2019  | 

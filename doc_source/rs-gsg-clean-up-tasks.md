@@ -16,4 +16,4 @@ However, you might want to keep the sample cluster running if you intend to try 
 
 On the cluster list page, the cluster status is updated as the cluster is deleted\. 
 
-After you complete this tutorial, you can find more information about Amazon Redshift and next steps in [Additional resources](rs-gsg-additional-resources.md)\.
+After you complete this tutorial, you can find more information about Amazon Redshift and next steps in [Additional resources](additional-resources.md)\.
