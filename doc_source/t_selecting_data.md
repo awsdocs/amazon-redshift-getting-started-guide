@@ -5,7 +5,7 @@ After you create a table and populate it with data, use a SELECT statement to di
 To view the data that you entered in the **DEMO** table, run the following command\.
 
 ```
-SELECT * from SALES.DEMO;
+SELECT * from DEMO;
 ```
 
 The result should looks like the following\.
