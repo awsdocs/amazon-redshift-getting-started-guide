@@ -91,7 +91,7 @@ SELECT * FROM pg_user;
 The user name `rdsdb` is used internally by Amazon Redshift to perform routine administrative and maintenance tasks\. You can filter your query to show only user\-defined user names by adding `where usesysid > 1` to your SELECT statement\.
 
 ```
-SELECT * FROM pg_user;
+SELECT * FROM pg_user WHERE usesysid > 1;
   usename   | usesysid | usecreatedb | usesuper | usecatupd |  passwd  | valuntil | useconfig
 ------------+----------+-------------+----------+-----------+----------+----------+-----------
  awsuser    |      100 | true        | true     | false     | ******** |          |
