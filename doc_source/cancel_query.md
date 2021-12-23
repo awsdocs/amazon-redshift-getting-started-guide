@@ -10,7 +10,7 @@ GROUP BY sellerid, firstname, lastname
 ORDER BY 4 desc;
 ```
 
-The result looks something like the following
+The result looks something like the following\.
 
 ```
  sellerid | firstname | lastname | sum

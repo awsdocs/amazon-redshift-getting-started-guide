@@ -1,4 +1,4 @@
-# Step 3: Configure inbound rules for SQL clients<a name="rs-gsg-authorize-cluster-access"></a>
+# Step 2: Configure inbound rules for SQL clients<a name="rs-gsg-authorize-cluster-access"></a>
 
 Later in this tutorial, you access your cluster from within a virtual private cloud \(VPC\) based on the Amazon VPC service\. However, if you use an SQL client from outside your firewall to access the cluster, make sure that you grant inbound access\. 
 

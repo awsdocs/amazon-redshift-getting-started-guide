@@ -1,20 +1,30 @@
-# Step 4: Grant access to the query editor and run queries<a name="rs-gsg-connect-to-cluster"></a>
+# Step 3: Grant access to one of the query editors and run queries<a name="rs-gsg-connect-to-cluster"></a>
 
  To query databases hosted by your Amazon Redshift cluster, you have two options:
 
-1. Connect to your cluster and run queries on the AWS Management Console with the query editor\. 
+1. Connect to your cluster and run queries on the AWS Management Console with one of the query editors\. 
 
-   If you use the query editor, you don't have to download and set up an SQL client application\. 
+   If you use one of the query editors, you don't have to download and set up an SQL client application\. 
 
 1. Connect to your cluster through an SQL client tool, such as SQL Workbench/J\. For more information about using SQL Workbench/J, see [Connect to your cluster by using SQL Workbench/J](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html) in the *Amazon Redshift Cluster Management Guide\.* 
 
-Using the Amazon Redshift query editor is the easiest way to run queries on databases hosted by your Amazon Redshift cluster\. After creating your cluster, you can immediately run queries using the Amazon Redshift console\. For details about considerations when using the Amazon Redshift query editor, see [Querying a database using the query editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html) in the *Amazon Redshift Cluster Management Guide\.*
+Using one of the Amazon Redshift query editors is the easiest way to run queries on databases hosted by your Amazon Redshift cluster\. After creating your cluster, you can immediately run queries using the Amazon Redshift console\. For details about considerations when using the Amazon Redshift query editor, see [Querying a database using the query editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html) in the *Amazon Redshift Cluster Management Guide\.*
 
-**Topics**
-+ [Grant access to the query editor](#gsg-query-cluster-configure)
-+ [Use the query editor](#gsg-using-query-editor)
+## Granting access to the query editor v2<a name="gsg-query-cluster-configure-v2"></a>
 
-## Grant access to the query editor<a name="gsg-query-cluster-configure"></a>
+The first time an administrator configures query editor v2 for your AWS account, they choose the AWS KMS key that is used to encrypt query editor v2 resources\. By default, an AWS owned key is used to encrypt resources\. Or an administrator can use a customer managed key by choosing the Amazon Resource Name \(ARN\) for the key in the configuration page\. After you configure an account, AWS KMS encryption settings can't be changed\. For more information, see [Configuring your AWS account](https://docs.aws.amazon.com/redshift/latest/mgmt/copy-parameters-credentials.html)\.
+
+To access the query editor v2, you need permission\. An administrator can attach one of the following AWS\-managed policies to the IAM user or role to grant permissions\. These AWS\-managed policies are written with different options that control how tagging resources allows sharing of queries\. You can use the IAM console \([https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\) to attach IAM policies\. 
+
+You can also create your own policy based on the permissions allowed and denied in the provided managed policies\. If you use the IAM console policy editor to create your own policy, choose **SQL Workbench** as the service for which you create the policy in the visual editor\. The query editor v2 uses the service name AWS SQL Workbench in the visual editor and IAM Policy Simulator\.  
+
+For more information, see [Accessing the query editor v2](query-editor-v2-configure.html)\.
+
+## Using the query editor v2<a name="gsg-using-query-editor-v2"></a>
+
+To use the query editor v2 to query a database, see [Working with query editor v2](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2-using.html)\.
+
+## Granting access to the query editor<a name="gsg-query-cluster-configure"></a>
 
 To use the Amazon Redshift query editor, you need permission\. To set access, attach the `AmazonRedshiftQueryEditor` and `AmazonRedshiftReadOnlyAccess` IAM policies to the IAM user that you use to access your cluster\.
 
@@ -38,58 +48,6 @@ If you have already created an IAM user to access Amazon Redshift, you can attac
 
 1. Choose **Add permissions**\.
 
-## Use the query editor<a name="gsg-using-query-editor"></a>
+## Using the query editor<a name="gsg-using-query-editor"></a>
 
- In the following example, you use the query editor to perform the following tasks:
-+ Run SQL commands\.
-+ View details about how queries run\.
-+ Save a query\.
-+ Download a query result set\.
-
-**To use the query editor**
-
-1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
-
-1. On the navigation menu, choose **EDITOR**, then connect to a database in your cluster\. 
-
-   On the **Connect to database** page, there are two ways to authenticate, namely, **Temporary credentials** and **AWS Secrets Manager**\. For this tutorial, choose **Create a new connection** and **Temporary credentials**, then enter the values that you used when you created the cluster, as follows: 
-   + **Cluster**: Choose **examplecluster**\.
-   + **Database name**: Enter **dev**\.
-   + **Database user**: Enter **awsuser**\.
-
-   Then choose **Connect**\. 
-
-1. For **Schema**, choose **public **to create a new table based on that schema\.
-
-1. Enter the following in the query editor window, and choose **Run** to create a new table\.
-
-   ```
-   create table shoes(
-                   shoetype varchar (10),
-                   color varchar(10));
-   ```
-
-1. Choose **Clear**\.
-
-1. Enter the following command in the query editor window, and choose **Run** to add rows to the table\.
-
-   ```
-   insert into shoes values 
-   ('loafers', 'brown'),
-   ('sandals', 'black');
-   ```
-
-1. Choose **Clear**\.
-
-1. Enter the following command in the query editor window, and choose **Run** to query the new table\.
-
-   ```
-   select * from shoes; 
-   ```
-
-   The **Query results** displays the results\.    
-[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-connect-to-cluster.html)
-
-1. Choose **Execution** to view the run details\.
-
-1. Choose **Export** to download the query results as a file\. The supported file formats are CSV, TXT, and HTML\.
+To use the query editor to query a database, see [Querying a database using the query editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html)\.

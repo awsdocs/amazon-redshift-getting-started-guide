@@ -6,4 +6,4 @@ To run federated queries, Amazon Redshift first makes a connection to the remote
 
 For information about setting up your environment for federated queries, see one of the following topics in the *Amazon Redshift Database Developer Guide*:
 + [Getting started with using federated queries to PostgreSQL](https://docs.aws.amazon.com/redshift/latest/dg/getting-started-federated.html)
-+ [Getting started with using federated queries to MySQL \(preview\)](https://docs.aws.amazon.com/redshift/latest/dg/getting-started-federated-mysql.html)
++ [Getting started with using federated queries to MySQL ](https://docs.aws.amazon.com/redshift/latest/dg/getting-started-federated-mysql.html)

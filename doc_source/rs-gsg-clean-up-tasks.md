@@ -1,4 +1,4 @@
-# Step 7: Reset your environment<a name="rs-gsg-clean-up-tasks"></a>
+# Step 6: Reset your environment<a name="rs-gsg-clean-up-tasks"></a>
 
 When you have completed this tutorial, we suggest that you reset your environment to the previous state by deleting your sample cluster\. You continue to incur charges for the Amazon Redshift service until you delete the cluster\.
 

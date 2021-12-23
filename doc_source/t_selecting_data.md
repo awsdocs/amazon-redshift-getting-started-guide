@@ -8,7 +8,7 @@ To view the data that you entered in the **DEMO** table, run the following comma
 SELECT * from SALES.DEMO;
 ```
 
-The result should looks like the following\.
+The result should look like the following\.
 
 ```
  personid |   city    

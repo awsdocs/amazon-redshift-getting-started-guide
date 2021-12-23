@@ -5,9 +5,9 @@ Following, you can find a description and walkthrough for common tasks so you ca
 After you connect to the initial cluster `dev` database, you can create a new database\. Independent of whether you choose to use the sample dataset or bring your own data to Amazon Redshift while creating a cluster, Amazon Redshift creates the `dev` database\.
 
 The examples in this section assume the following:
-+ You have signed up for Amazon Redshift\. For more information, see [Prerequisites](getting-started.md#prerequisites)\.
++ You have signed up for Amazon Redshift\. For more information, see [Prerequisites](prerequisites.md)\.
 + You have created an Amazon Redshift cluster\. For more information, see [Getting started with Amazon Redshift clusters and data loading](data-loading.md)\.
-+ You have established a connection to the cluster from your SQL client tool, such as the Amazon Redshift console query editor\. For more information, see [Step 4: Grant access to the query editor and run queries](rs-gsg-connect-to-cluster.md)\.
++ You have established a connection to the cluster from your SQL client tool, such as the Amazon Redshift console query editor\. For more information, see [Step 3: Grant access to one of the query editors and run queries](rs-gsg-connect-to-cluster.md)\.
 
 **Important**  
 The cluster that you deployed for this exercise runs in a live environment\. As long as it's running, it accrues charges to your AWS account\. For pricing information, see [the Amazon Redshift pricing page](https://aws.amazon.com/redshift/pricing/)\.   

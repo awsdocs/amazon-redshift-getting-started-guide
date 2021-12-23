@@ -1,4 +1,4 @@
-# Step 6: Try example queries using the query editor<a name="rs-gsg-try-query"></a>
+# Step 5: Try example queries using the query editor<a name="rs-gsg-try-query"></a>
 
 Now, try some example queries, as shown following\. For more information on working with the SELECT command, see [SELECT](https://docs.aws.amazon.com/redshift/latest/dg/r_SELECT_synopsis.html) in the *Amazon Redshift Developer Guide*\.
 

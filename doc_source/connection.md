@@ -1,9 +1,9 @@
 # Connecting to Amazon Redshift<a name="connection"></a>
 
 To connect to Amazon Redshift clusters, from the **Clusters** page, expand **Connect to Amazon Redshift clusters** and do one of the following:
-+ Use the query editor to run queries on databases hosted by your Amazon Redshift cluster\. After creating your cluster, you can immediately run queries by using the query editor\.
++ Use the query editor v2 to run queries on databases hosted by your Amazon Redshift cluster\. After creating your cluster, you can immediately run queries by using the query editor v2\.
 
-  For more information, see [Querying a database using the query editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html)\.
+  For more information, see [Querying a database using the Amazon Redshift query editor v2](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2.html)\.
 + Connect to Amazon Redshift from your client tools using JDBC or ODBC drivers by copying the JDBC or ODBC driver URL\.
 
   To work with data in your cluster, you need JDBC or ODBC drivers for connectivity from your client computer or instance\. Code your applications to use JDBC or ODBC data access API operations, or use SQL client tools that support either JDBC or ODBC\.

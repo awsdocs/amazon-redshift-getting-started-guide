@@ -1,4 +1,18 @@
-# Step 5: Load sample data from Amazon S3<a name="rs-gsg-create-sample-db"></a>
+# Step 4: Load data from Amazon S3 to Amazon Redshift<a name="rs-gsg-create-sample-db"></a>
+
+Using one of the Amazon Redshift query editors is the easiest way to load data to tables\. After creating your cluster, you can load data from Amazon S3 to your cluster using the Amazon Redshift console\. 
+
+Use the query editor v2 that simplifies the loading of data using the Load data wizard\. For more information, see [Loading your own data from Amazon S3 to Amazon Redshift using the query editor v2](#gsg-load-sample-data-v2)\. Or use the query editor to create tables and load your data\. For more information, see [Loading sample data from Amazon S3 using the query editor](#gsg-load-sample-data-v1)\.
+
+## Loading your own data from Amazon S3 to Amazon Redshift using the query editor v2<a name="gsg-load-sample-data-v2"></a>
+
+To load your own data from Amazon S3 to Amazon Redshift, Amazon Redshift requires an IAM role that has the required privileges to load data from the specified Amazon S3 bucket\.
+
+First, connect to a database\. Next, create some tables in the database\. Then load your own data from Amazon S3 to Amazon Redshift\. For more information on how to work with the query editor v2, see [Working with query editor v2](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2-using.html) in the *Amazon Redshift Cluster Management Guide*\.
+
+The COPY command generated and used in the query editor v2 Load data wizard supports all the parameters available to the COPY command syntax to load data from Amazon S3\. For information about the COPY command and its options used to copy load from Amazon S3, see [COPY from Amazon Simple Storage Service](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-data-source-s3.html) in the *Amazon Redshift Database Developer Guide*\.
+
+## Loading sample data from Amazon S3 using the query editor<a name="gsg-load-sample-data-v1"></a>
 
 At this point, you have a database called `dev` and you are connected to it\. Next, you create some tables in the database, upload data to the tables, and try a query\. For your convenience, the sample data that you load is available in an Amazon S3 bucket\. 
 
@@ -6,8 +20,8 @@ At this point, you have a database called `dev` and you are connected to it\. Ne
 If you're using a SQL client tool, ensure that your SQL client is connected to the cluster\.
 
 After you complete this step, you can do the following:
-+ Try example queries at [Step 6: Try example queries using the query editor](rs-gsg-try-query.md)\. 
-+ Reset your environment at [Step 7: Reset your environment](rs-gsg-clean-up-tasks.md)\.
++ Try example queries at [Step 5: Try example queries using the query editor](rs-gsg-try-query.md)\. 
++ Reset your environment at [Step 6: Reset your environment](rs-gsg-clean-up-tasks.md)\.
 + Find more information about Amazon Redshift at [Additional resources](additional-resources.md)\.
 
 **Note**  
@@ -114,72 +128,66 @@ We recommend using the COPY command to load large datasets into Amazon Redshift 
 
    1.  Unzip and load the individual files to a `tickit` folder in your Amazon S3 bucket in your AWS Region\.
 
-   1.  Edit the COPY commands in this tutorial to point to the files in your Amazon S3 bucket\. For information about how to manage files with Amazon S3, see [Creating and configuring an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
+   1.  Edit the COPY commands in this tutorial to point to the files in your Amazon S3 bucket\. For information about how to manage files with Amazon S3, see [Creating and configuring an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html) in the *Amazon Simple Storage Service User Guide*\.
 
-   1. Provide authentication for your cluster to access Amazon S3 on your behalf to load the sample data\. You can provide either role\-based authentication or key\-based authentication\. We recommend using role\-based authentication\. You can use the **myRedshiftRole** IAM role that you created at [Step 1: Create an IAM role](rs-gsg-create-an-iam-role.md) to allow Amazon Redshift to load data from Amazon S3 buckets\. For more information about both types of authentication, see [CREDENTIALS](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-credentials.html) in the *Amazon Redshift Database Developer Guide\.*
-
-      For this step, you provide authentication by referencing the IAM role that you created and then attached to your cluster in previous steps\.
-**Note**  
-If you don't have proper permissions to access Amazon S3, you receive the following error message when running the COPY command: `S3ServiceException: Access Denied`\. For information about IAM permissions for the COPY command, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/copy-usage_notes-access-permissions.html) in the *Amazon Redshift Database Developer Guide*\.
+   1. Provide authentication for your cluster to access Amazon S3 on your behalf to load the sample data\. You provide authentication by referencing the IAM role that you created and set as the default for your cluster in previous steps\.
 
       The COPY commands include a placeholder for the Amazon Resource Name \(ARN\) for the IAM role, your bucket name, and an AWS Region, as shown in the following example\.
 
       ```
       copy users from 's3://<myBucket>/tickit/allusers_pipe.txt' 
-      credentials 'aws_iam_role=<iam-role-arn>' 
+      iam_role default
       delimiter '|' region '<aws-region>';
       ```
-
-      To authorize access using an IAM role, replace `<iam-role-arn>` in the CREDENTIALS parameter string with the role ARN for the IAM role that you created in [Step 1: Create an IAM role](rs-gsg-create-an-iam-role.md)\.
 
        Your COPY command should look similar to the following example\. 
 
       ```
       copy users from 's3://<myBucket>/tickit/allusers_pipe.txt' 
-      credentials 'aws_iam_role=arn:aws:iam::123456789012:role/myRedshiftRole' 
+      iam_role default
       delimiter '|' region '<aws-region>';
       ```
 
-      To load the sample data, replace *`<myBucket>` *, *`<iam-role-arn>`*, and *`<aws-region>`* in the following COPY commands with your values\. If you are using the Amazon Redshift query editor, individually run the following commands\.
+      To load the sample data, replace *`<myBucket>` * and *`<aws-region>`* in the following COPY commands with your values\. If you are using the Amazon Redshift query editor, individually run the following commands\.
 
       ```
       copy users from 's3://<myBucket>/tickit/allusers_pipe.txt' 
-      credentials 'aws_iam_role=<iam-role-arn>' 
+      iam_role default 
       delimiter '|' region '<aws-region>';
       ```
 
       ```
       copy venue from 's3://<myBucket>/tickit/venue_pipe.txt' 
-      credentials 'aws_iam_role=<iam-role-arn>' 
+      iam_role default
       delimiter '|' region '<aws-region>';
       ```
 
       ```
       copy category from 's3://<myBucket>/tickit/category_pipe.txt' 
-      credentials 'aws_iam_role=<iam-role-arn>' 
+      iam_role default
       delimiter '|' region '<aws-region>';
       ```
 
       ```
       copy date from 's3://<myBucket>/tickit/date2008_pipe.txt' 
-      credentials 'aws_iam_role=<iam-role-arn>' 
+      iam_role default
       delimiter '|' region '<aws-region>';
       ```
 
       ```
       copy event from 's3://<myBucket>/tickit/allevents_pipe.txt' 
-      credentials 'aws_iam_role=<iam-role-arn>' 
+      iam_role default
       delimiter '|' timeformat 'YYYY-MM-DD HH:MI:SS' region '<aws-region>';
       ```
 
       ```
       copy listing from 's3://<myBucket>/tickit/listings_pipe.txt' 
-      credentials 'aws_iam_role=<iam-role-arn>' 
+      iam_role default
       delimiter '|' region '<aws-region>';
       ```
 
       ```
       copy sales from 's3://<myBucket>/tickit/sales_tab.txt'
-      credentials 'aws_iam_role=<iam-role-arn>'
+      iam_role default
       delimiter '\t' timeformat 'MM/DD/YYYY HH:MI:SS' region '<aws-region>';
       ```
