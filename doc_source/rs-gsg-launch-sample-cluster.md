@@ -4,36 +4,6 @@ For any operation that accesses data from another AWS resource, your cluster nee
 
 To best protect your sensitive data and safeguard your AWS access credentials, we recommend creating an IAM role and attaching it to your cluster\. For more information about providing access permissions, see [Permissions to access other AWS resources](https://docs.aws.amazon.com/redshift/latest/dg/copy-usage_notes-access-permissions.html)\.
 
-In this step, you create a new IAM role that allows Amazon Redshift to load data from Amazon S3 buckets\. An IAM role is an IAM identity that you can create in your account that has specific permissions\. In the next step, you attach the role to your cluster\.
-
-## <a name="rs-gsg-how-to-create-an-iam-role"></a>
-
-**To create an IAM role for Amazon Redshift**
-
-1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
-
-1. In the navigation pane, choose **Roles**\.
-
-1. Choose **Create role**\.
-
-1. In the **AWS Service** group, choose **Redshift**\. 
-
-1. Under **Select your use case**, choose **Redshift \- Customizable**, then choose **Next: Permissions**\.
-
-1. On the **Attach permissions policies** page, choose **AmazonS3ReadOnlyAccess**\. You can keep the default setting for **Set permissions boundary**\. Then choose **Next: Tags**\.
-
-1. The **Add tags** page appears\. You can optionally add tags\. Choose **Next: Review**\.
-
-1. For **Role name**, enter a name for your role\. For this tutorial, enter **myRedshiftRole**\. 
-
-1. Review the information, and then choose **Create Role**\.
-
-1. Choose the role name of the role that you just created\.
-
-1. Copy the **Role ARN** value to your clipboard—this value is the Amazon Resource Name \(ARN\) for the role that you just created\. You use that value when you use the COPY command to load data in [Step 4: Load data from Amazon S3 to Amazon Redshift](rs-gsg-create-sample-db.md)\.
-
-Now that you have created the new role, your next step is to attach it to your cluster\. You can attach the role when you launch a new cluster or you can attach it to an existing cluster\. In the next step, you attach the role to a new cluster\.
-
 The cluster that you are about to create is live, not running in a sandbox\. You incur the standard Amazon Redshift usage fees for the cluster until you delete it\. If you complete the tutorial described here in one sitting and delete the cluster when you are finished, the total charges are minimal\. 
 
 **To create an Amazon Redshift cluster**
@@ -44,7 +14,7 @@ If you use IAM user credentials, ensure that you have the necessary permissions 
 
 1. At upper right, choose the AWS Region where you want to create the cluster\. 
 
-1. On the navigation menu, choose **CLUSTERS**, then choose **Create cluster**\. The **Create cluster** page appears\.
+1. On the navigation menu, choose **Clusters**, then choose **Create cluster**\. The **Create cluster** page appears\.
 
 1. In the **Cluster configuration** section, specify values for **Cluster identifier**, **Node type**, and **Nodes**: 
    + **Cluster identifier**: Enter **examplecluster** for this tutorial\. This identifier must be unique\. The identifier must be from 1–63 characters using as valid characters a–z \(lowercase only\) and \- \(hyphen\)\. 
@@ -54,10 +24,10 @@ The following step assumes an AWS Region that supports RA3 node types\. For a li
      + If your AWS Region supports RA3 node types, choose either **Production** or **Free trial** to answer the question **What are you planning to use this cluster for?** 
 
        If your organization is eligible, you might be able to create a cluster under the Amazon Redshift free trial program\. For information about creating clusters using the free trial program, see [Using a sample dataset](sample-data-load.md)\. To do this, choose **Free trial** to create a configuration with the dc2\.large node type\. For more information about choosing a free trial, see [Amazon Redshift free trial](http://aws.amazon.com/redshift/free-trial/)\. 
-     + If you don't know how large to size your cluster, choose **Help me choose**\. Doing this starts a sizing calculator that asks you questions about the size and query characteristics of the data that you plan to store in your data warehouse\. 
+     + If you don't know how large to size your cluster, choose **Help me choose**\. Doing so starts a sizing calculator that asks you questions about the size and query characteristics of the data that you plan to store in your data warehouse\. 
 
        If you know the required size of your cluster \(that is, the node type and number of nodes\), choose **I'll choose**\. Then choose the **Node type** and number of **Nodes** to size your cluster for the proof of concept\.
-   + Choose **dc2\.large**for **Node type** and **2** for **Nodes** for this tutorial\.
+   + Choose **dc2\.large** for **Node type** and **2** for **Nodes** for this tutorial\.
    + If you have chosen **Production** for your cluster, then do one of the following:
      + To use the sample dataset Amazon Redshift provides, in **Sample data**, choose **Load sample data**\. Amazon Redshift loads the sample dataset Tickit to the default `dev` database and `public` schema\.
      + To bring your own data to Amazon Redshift, continue with the rest of the tutorial\.
@@ -83,7 +53,7 @@ The following step assumes an AWS Region that supports RA3 node types\. For a li
 
       Because you created your IAM role from the console, it has the `AmazonRedshiftAllCommandsFullAccess` policy attached\. This allows Amazon Redshift to copy, load, query, and analyze data from Amazon resources in your IAM account\. 
 
-   For information on how to manage the default IAM role for a cluster, see [Creating an IAM role as default for Amazon Redshift ](https://docs.aws.amazon.com/redshift/latest/mgmt/default-iam-role.html.html) in the *Amazon Redshift Cluster Management Guide*\.
+   For information on how to manage the default IAM role for a cluster, see [Creating an IAM role as default for Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/mgmt/default-iam-role.html)\.
 
 1. \(Optional\) In the **Additional configurations** section, turn off **Use defaults** to modify **Network and security**, **Database configuration**, **Maintenance**, **Monitoring**, and **Backup** settings\.
 

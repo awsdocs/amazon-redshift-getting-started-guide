@@ -2,7 +2,7 @@
 
 Using one of the Amazon Redshift query editors is the easiest way to load data to tables\. After creating your cluster, you can load data from Amazon S3 to your cluster using the Amazon Redshift console\. 
 
-Use the query editor v2 that simplifies the loading of data using the Load data wizard\. For more information, see [Loading your own data from Amazon S3 to Amazon Redshift using the query editor v2](#gsg-load-sample-data-v2)\. Or use the query editor to create tables and load your data\. For more information, see [Loading sample data from Amazon S3 using the query editor](#gsg-load-sample-data-v1)\.
+Using the query editor v2 simplifies loading data when using the Load data wizard\. For more information, see [Loading your own data from Amazon S3 to Amazon Redshift using the query editor v2](#gsg-load-sample-data-v2)\. You can also use the query editor v2 to create tables and load your data\. For more information, see [Loading sample data from Amazon S3 using the query editor](#gsg-load-sample-data-v1)\.
 
 ## Loading your own data from Amazon S3 to Amazon Redshift using the query editor v2<a name="gsg-load-sample-data-v2"></a>
 

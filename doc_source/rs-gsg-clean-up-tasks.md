@@ -8,7 +8,7 @@ However, you might want to keep the sample cluster running if you intend to try 
 
 1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
 
-1. On the navigation menu, choose **CLUSTERS** to display your list of clusters\. 
+1. On the navigation menu, choose **Clusters** to display your list of clusters\. 
 
 1. Choose the **examplecluster** cluster\. For **Actions**, choose **Delete**\. The **Delete cluster** page appears\. 
 

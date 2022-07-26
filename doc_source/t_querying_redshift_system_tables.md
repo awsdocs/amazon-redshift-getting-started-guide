@@ -72,7 +72,7 @@ select * from pg_table_def where tablename = 'demo';
 
 For more information, see [PG\_TABLE\_DEF](https://docs.aws.amazon.com/redshift/latest/dg/r_PG_TABLE_DEF.html)\.
 
-You can also use the Amazon Redshift query editor to view all the tables in a specified schema by first choosing a database that you want to connect to\.
+You can also use the query editor v2 to view all the tables in a specified schema by first choosing a database that you want to connect to\.
 
 ## View users<a name="t_querying_redshift_system_tables-view-database-users"></a>
 
@@ -91,7 +91,7 @@ SELECT * FROM pg_user;
 The user name `rdsdb` is used internally by Amazon Redshift to perform routine administrative and maintenance tasks\. You can filter your query to show only user\-defined user names by adding `where usesysid > 1` to your SELECT statement\.
 
 ```
-SELECT * FROM pg_user;
+SELECT * FROM pg_user WHERE usesysid > 1;
   usename   | usesysid | usecreatedb | usesuper | usecatupd |  passwd  | valuntil | useconfig
 ------------+----------+-------------+----------+-----------+----------+----------+-----------
  awsuser    |      100 | true        | true     | false     | ******** |          |

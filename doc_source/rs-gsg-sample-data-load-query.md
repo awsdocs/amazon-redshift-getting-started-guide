@@ -22,7 +22,7 @@ When you select a cluster with query editor v2, depending on the context, you ca
 
 By default, Amazon Redshift creates a default database named `dev` and a default schema named `public`\. To view the individual data files of the sample dataset, choose a cluster, go to the query editor v2, and choose the `dev` database, `public` schema, then `Tables`\.
 
-Alternatively, in the navigation pane, choose **CLUSTERS** and the cluster you want query data on\. Then under **Query data**, choose either **Query in query editor** or **Query in query editor v2** to query data in your specified query editor\.
+Alternatively, in the navigation pane, choose **Clusters** and the cluster you want query data on\. Then under **Query data**, choose either **Query in query editor** or **Query in query editor v2** to query data in your specified query editor\.
 
 ![\[Screenshot of the console: Query data under Connect to Amazon Redshift clusters\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/query-data.png)
 
