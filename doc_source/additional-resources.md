@@ -1,7 +1,7 @@
 # Additional resources<a name="additional-resources"></a>
 
 When you have completed these tutorials, we recommend that you continue to learn more about the concepts introduced in this guide by using the following Amazon Redshift resources: 
-+ [Amazon Redshift Cluster Management Guide](https://docs.aws.amazon.com/redshift/latest/mgmt/): This guide builds upon this *Amazon Redshift Getting Started Guide*\. It provides in\-depth information about the concepts and tasks for creating, managing, and monitoring clusters\.
++ [Amazon Redshift Management Guide](https://docs.aws.amazon.com/redshift/latest/mgmt/): This guide builds upon this *Amazon Redshift Getting Started Guide*\. It provides in\-depth information about the concepts and tasks for creating, managing, and monitoring clusters\.
 + [Amazon Redshift Database Developer Guide](https://docs.aws.amazon.com/redshift/latest/dg/): This guide also builds upon this *Amazon Redshift Getting Started Guide*\. It provides in\-depth information for database developers about designing, building, querying, and maintaining the databases that make up your data warehouse\.
   + [SQL reference](https://docs.aws.amazon.com/redshift/latest/dg/cm_chap_SQLCommandRef.html): This topic describes SQL commands and function references for Amazon Redshift\.
   + [System tables and views](https://docs.aws.amazon.com/redshift/latest/dg/c_intro_system_tables.html): This topic describes system tables and views for Amazon Redshift\.

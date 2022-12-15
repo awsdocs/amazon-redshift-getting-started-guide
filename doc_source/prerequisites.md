@@ -14,6 +14,8 @@ If you don't already have an AWS account, sign up for one\. If you already have 
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
+   When you sign up for an AWS account, an *AWS account root user* is created\. The root user has access to all AWS services and resources in the account\. As a security best practice, [assign administrative access to an administrative user](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html), and use only the root user to perform [tasks that require root user access](https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html)\.
+
 ## Determine firewall rules<a name="rs-gsg-prereq-firewall-rules"></a>
 
 As part of this tutorial, you specify a port when you launch your Amazon Redshift cluster\. You also create an inbound ingress rule in a security group to allow access through the port to your cluster\.

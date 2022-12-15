@@ -38,4 +38,4 @@ When you have the prerequisites completed, you can start creating your Amazon Re
 
 This tutorial uses the Amazon Redshift query editor v2\. You can use this editor to query data immediately, after Amazon Redshift finishes creating the cluster\.
 
-You can also choose other SQL client tools that support JDBC or ODBC drivers to work with data in your cluster\. For more information, see [Connecting to an Amazon Redshift cluster using SQL client tools](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-to-cluster.html) in the *Amazon Redshift Cluster Management Guide*\.
+You can also choose other SQL client tools that support JDBC or ODBC drivers to work with data in your cluster\. For more information, see [Connecting to an Amazon Redshift cluster using SQL client tools](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-to-cluster.html) in the *Amazon Redshift Management Guide*\.

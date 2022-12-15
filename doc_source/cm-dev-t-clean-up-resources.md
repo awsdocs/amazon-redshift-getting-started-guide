@@ -2,7 +2,7 @@
 
 If you deployed a cluster to complete this exercise, when you are finished with the exercise delete the cluster\. Deleting the cluster stops it accruing charges to your AWS account\.
 
-To delete the cluster, follow the steps in [Deleting a cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-console.html#delete-cluster) in the *Amazon Redshift Cluster Management Guide*\.
+To delete the cluster, follow the steps in [Deleting a cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-console.html#delete-cluster) in the *Amazon Redshift Management Guide*\.
 
 If you want to keep the cluster, keep the sample data for reference\. Most of the examples in this guide use the tables that you create in this exercise\. The size of the data won't have any significant effect on your available storage\.
 

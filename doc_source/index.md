@@ -4,13 +4,13 @@
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
-Amazon's trademarks and trade dress may not be used in 
-     connection with any product or service that is not Amazon's, 
-     in any manner that is likely to cause confusion among customers, 
-     or in any manner that disparages or discredits Amazon. All other 
-     trademarks not owned by Amazon are the property of their respective
-     owners, who may or may not be affiliated with, connected to, or 
-     sponsored by Amazon.
+Amazon's trademarks and trade dress may not be used in
+connection with any product or service that is not Amazon's,
+in any manner that is likely to cause confusion among customers,
+or in any manner that disparages or discredits Amazon. All other
+trademarks not owned by Amazon are the property of their respective
+owners, who may or may not be affiliated with, connected to, or
+sponsored by Amazon.
 
 -----
 ## Contents
@@ -46,7 +46,13 @@ Amazon's trademarks and trade dress may not be used in
 + [Getting started with Amazon Redshift Serverless basics](new-user-serverless.md)
    + [Getting started with the Amazon Redshift Serverless console](serverless-console.md)
    + [Connecting to Amazon Redshift Serverless](connecting-to-serverless.md)
-   + [Setting up Amazon Redshift Serverless for the first time](serverless-first-time-setup.md)
+   + [Getting started with Amazon Redshift Serverless and data loading](serverless-first-time-setup.md)
+      + [Using a sample dataset](serverless-sample-data-load.md)
+         + [Step 1: Set up Amazon Redshift Serverless for the first time](serverless-console-getting-started-sample-data.md)
+         + [Step 2: Query sample data in Amazon Redshift query editor v2](rs-serverless-console-query-sample-data.md)
+      + [Bringing your own data to Amazon Redshift Serverless](serverless-bring-own-data.md)
+         + [Step 1: Set up Amazon Redshift Serverless for the first time](serverless-console-getting-started-own-data.md)
+         + [Step 2: Query your own data in Amazon Redshift query editor v2](rs-serverless-console-query-own-data.md)
 + [Getting started with querying data sources outside your Amazon Redshift database](data-querying.md)
    + [Getting started querying your data lake](data-lake.md)
    + [Getting started querying data on remote data sources](federated-query.md)

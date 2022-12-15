@@ -8,7 +8,7 @@ Using the query editor v2 simplifies loading data when using the Load data wizar
 
 To load your own data from Amazon S3 to Amazon Redshift, Amazon Redshift requires an IAM role that has the required privileges to load data from the specified Amazon S3 bucket\.
 
-First, connect to a database\. Next, create some tables in the database\. Then load your own data from Amazon S3 to Amazon Redshift\. For more information on how to work with the query editor v2, see [Working with query editor v2](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2-using.html) in the *Amazon Redshift Cluster Management Guide*\.
+First, connect to a database\. Next, create some tables in the database\. Then load your own data from Amazon S3 to Amazon Redshift\. For more information on how to work with the query editor v2, see [Working with query editor v2](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2-using.html) in the *Amazon Redshift Management Guide*\.
 
 The COPY command generated and used in the query editor v2 Load data wizard supports all the parameters available to the COPY command syntax to load data from Amazon S3\. For information about the COPY command and its options used to copy load from Amazon S3, see [COPY from Amazon Simple Storage Service](https://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-data-source-s3.html) in the *Amazon Redshift Database Developer Guide*\.
 

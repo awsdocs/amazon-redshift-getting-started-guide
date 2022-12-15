@@ -6,9 +6,9 @@
 
    If you use one of the query editors, you don't have to download and set up an SQL client application\. 
 
-1. Connect to your cluster through an SQL client tool, such as SQL Workbench/J\. For more information about using SQL Workbench/J, see [Connect to your cluster by using SQL Workbench/J](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html) in the *Amazon Redshift Cluster Management Guide\.* 
+1. Connect to your cluster through an SQL client tool, such as SQL Workbench/J\. For more information about using SQL Workbench/J, see [Connect to your cluster by using SQL Workbench/J](https://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html) in the *Amazon Redshift Management Guide\.* 
 
-Using one of the Amazon Redshift query editors is the easiest way to run queries on databases hosted by your Amazon Redshift cluster\. After creating your cluster, you can immediately run queries using the Amazon Redshift console\. For details about considerations when using the Amazon Redshift query editor, see [Querying a database using the query editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html) in the *Amazon Redshift Cluster Management Guide\.*
+Using one of the Amazon Redshift query editors is the easiest way to run queries on databases hosted by your Amazon Redshift cluster\. After creating your cluster, you can immediately run queries using the Amazon Redshift console\. For details about considerations when using the Amazon Redshift query editor, see [Querying a database using the query editor](https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor.html) in the *Amazon Redshift Management Guide\.*
 
 ## Granting access to the query editor v2<a name="gsg-query-cluster-configure-v2"></a>
 

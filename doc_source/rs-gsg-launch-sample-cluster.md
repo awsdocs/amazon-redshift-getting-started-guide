@@ -10,7 +10,7 @@ The cluster that you are about to create is live, not running in a sandbox\. You
 
 1. Sign in to the AWS Management Console and open the Amazon Redshift console at [https://console\.aws\.amazon\.com/redshift/](https://console.aws.amazon.com/redshift/)\.
 **Important**  
-If you use IAM user credentials, ensure that you have the necessary permissions to perform the cluster operations\. For more information, see [Controlling access to IAM users](https://docs.aws.amazon.com/redshift/latest/mgmt/iam-redshift-user-mgmt.html) in the *Amazon Redshift Cluster Management Guide*\.
+If you use IAM user credentials, ensure that you have the necessary permissions to perform the cluster operations\. For more information, see [Controlling access to IAM users](https://docs.aws.amazon.com/redshift/latest/mgmt/iam-redshift-user-mgmt.html) in the *Amazon Redshift Management Guide*\.
 
 1. At upper right, choose the AWS Region where you want to create the cluster\. 
 
@@ -20,7 +20,7 @@ If you use IAM user credentials, ensure that you have the necessary permissions 
    + **Cluster identifier**: Enter **examplecluster** for this tutorial\. This identifier must be unique\. The identifier must be from 1–63 characters using as valid characters a–z \(lowercase only\) and \- \(hyphen\)\. 
    + Choose one of the following methods to size your cluster:
 **Note**  
-The following step assumes an AWS Region that supports RA3 node types\. For a list of AWS Regions that support RA3 node types, see [Overview of RA3 node types](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-ra3-node-types) in the *Amazon Redshift Cluster Management Guide*\. 
+The following step assumes an AWS Region that supports RA3 node types\. For a list of AWS Regions that support RA3 node types, see [Overview of RA3 node types](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-ra3-node-types) in the *Amazon Redshift Management Guide*\. 
      + If your AWS Region supports RA3 node types, choose either **Production** or **Free trial** to answer the question **What are you planning to use this cluster for?** 
 
        If your organization is eligible, you might be able to create a cluster under the Amazon Redshift free trial program\. For information about creating clusters using the free trial program, see [Using a sample dataset](sample-data-load.md)\. To do this, choose **Free trial** to create a configuration with the dc2\.large node type\. For more information about choosing a free trial, see [Amazon Redshift free trial](http://aws.amazon.com/redshift/free-trial/)\. 
@@ -59,6 +59,6 @@ The following step assumes an AWS Region that supports RA3 node types\. For a li
 
    In some cases, you might create your cluster with the **Load sample data** option and want to turn on enhanced Amazon VPC routing\. If so, the cluster in your virtual private cloud \(VPC\) requires access to the Amazon S3 endpoint for data to be loaded\. 
 
-   To make the cluster publicly accessible, you can do one of two things\. You can configure a network address translation \(NAT\) address in your VPC for the cluster to access the internet\. Or you can configure an Amazon S3 VPC endpoint in your VPC\. For more information about enhanced Amazon VPC routing, see [Enabling enhanced Amazon VPC routing](https://docs.aws.amazon.com/redshift/latest/mgmt/enhanced-vpc-enabling-cluster.html) in the *Amazon Redshift Cluster Management Guide*\. 
+   To make the cluster publicly accessible, you can do one of two things\. You can configure a network address translation \(NAT\) address in your VPC for the cluster to access the internet\. Or you can configure an Amazon S3 VPC endpoint in your VPC\. For more information about enhanced Amazon VPC routing, see [Enabling enhanced Amazon VPC routing](https://docs.aws.amazon.com/redshift/latest/mgmt/enhanced-vpc-enabling-cluster.html) in the *Amazon Redshift Management Guide*\. 
 
 1. Choose **Create cluster**\. 
