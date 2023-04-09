@@ -8,6 +8,6 @@ You can skip this step if you plan to access the cluster with the Amazon Redshif
 
 1. Check your firewall rules if your cluster needs to be accessed from outside a firewall\. For example, your client might be an Amazon Elastic Compute Cloud \(Amazon EC2\) instance or an external computer\. 
 
-   For more information on firewall rules, see [Security group rules](AWSEC2/latest/UserGuide/security-group-rules.html) in the *Amazon EC2 User Guide for Linux Instances*\.
+   For more information on firewall rules, see [Security group rules](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
 1. To access from an Amazon EC2 external client, add an ingress rule to the security group attached to your cluster that allows inbound traffic\. You add Amazon EC2 security group rules in the Amazon EC2 console\. For example, a CIDR/IP of 192\.0\.2\.0/24 allows clients in that IP address range to connect to your cluster\. Find out the correct CIDR/IP for your environment\.

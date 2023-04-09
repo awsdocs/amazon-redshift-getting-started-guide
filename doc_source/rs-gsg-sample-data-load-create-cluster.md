@@ -15,12 +15,7 @@ When you have the prerequisites completed, you can start creating your Amazon Re
 
    Enter **examplecluster** for this tutorial\.
 
-1. If your organization is eligible, you might be able to create a cluster under the Amazon Redshift free trial program\. To do this, choose **Free trial** to create a configuration with the dc2\.large node type\. For more information about choosing a free trial, see [Amazon Redshift free trial](http://aws.amazon.com/redshift/free-trial/)\. 
-
-   The console displays your selection, as shown in the screenshot following\.  
-![\[Console showing selection of a free trial\]](http://docs.aws.amazon.com/redshift/latest/gsg/images/free-trial.png)
-
-   If you later choose another node type, your organization is no longer eligible for the free trial\. 
+1. If your organization is eligible and your cluster is being created in an AWS Region where Amazon Redshift Serverless is unavailable, you might be able to create a cluster under the Amazon Redshift free trial program\. Choose either **Production** or **Free trial** to answer the question **What are you planning to use this cluster for?** When you choose **Free trial**, you create a configuration with the dc2\.large node type\. For more information about choosing a free trial, see [Amazon Redshift free trial](http://aws.amazon.com/redshift/free-trial/)\.   For a list of AWS Regions where Amazon Redshift Serverless is available, see the endpoints listed for the [Redshift Serverless API ](https://docs.aws.amazon.com/general/latest/gr/redshift-service.html) in the *Amazon Web Services General Reference*\.  
 
    After you choose your node type, do one of the following:
    + In **Sample data**, choose **Load sample data** to load the sample dataset into your Amazon Redshift cluster\. Amazon Redshift loads the sample dataset Tickit into the default `dev` database and `public` schema\. You can start using the query editor v2 to query data\. 

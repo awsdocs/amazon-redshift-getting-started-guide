@@ -1,6 +1,6 @@
-# Getting started querying your data lake<a name="data-lake"></a>
+# Querying your data lake<a name="data-lake"></a>
 
-You can use Amazon Redshift Spectrum to query data in Amazon S3 files without having to load the data into Amazon Redshift tables\. You can query data in many formats, including Parquet, ORC, RCFile, TextFile, SequenceFile, RegexSerde, OpenCSV, and AVRO\. To define the structure of the files in Amazon S3, you create external schemas and tables\. Then, you use an external data catalog such as AWS Glue or your own Apache Hive metastore\. Changes to either type of data catalog are immediately available to any of your Amazon Redshift clusters\.
+You can use Amazon Redshift Spectrum to query data in Amazon S3 files without having to load the data into Amazon Redshift tables\. Amazon Redshift provides SQL capability designed for fast online analytical processing \(OLAP\) of very large datasets that are stored in both Amazon Redshift clusters and Amazon S3 data lakes\. You can query data in many formats, including Parquet, ORC, RCFile, TextFile, SequenceFile, RegexSerde, OpenCSV, and AVRO\. To define the structure of the files in Amazon S3, you create external schemas and tables\. Then, you use an external data catalog such as AWS Glue or your own Apache Hive metastore\. Changes to either type of data catalog are immediately available to any of your Amazon Redshift clusters\.
 
 After your data is registered with an AWS Glue Data Catalog and enabled with AWS Lake Formation, you can query it by using Redshift Spectrum\. 
 

@@ -1,4 +1,4 @@
-# Getting started querying data on remote data sources<a name="federated-query"></a>
+# Querying data on remote data sources<a name="federated-query"></a>
 
 You can join data from an Amazon RDS database, an Amazon Aurora database, or Amazon S3 with data in your Amazon Redshift database using a federated query\. You can use Amazon Redshift to query operational data directly \(without moving it\), apply transformations, and insert data into your Redshift tables\. Some of the computation for federated queries is distributed to the remote data sources\.
 

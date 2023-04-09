@@ -2,7 +2,7 @@
 
 In this tutorial, you walk through the process to create an Amazon Redshift cluster by using a sample dataset\. Amazon Redshift automatically loads the sample dataset when you are creating a new cluster\. You can immediately query the data after the cluster is created\.
 
-Before you begin setting up an Amazon Redshift cluster, make sure that you complete the [Sign up for AWS](prerequisites.md#rs-gsg-prereq-signup) and [Determine firewall rules](prerequisites.md#rs-gsg-prereq-firewall-rules)\.
+Before you begin setting up an Amazon Redshift cluster, make sure that you complete the [Signing up for AWS](console.md#provisioned-prereq-signup) and [Determine firewall rules](console.md#rs-gsg-prereq-firewall-rules)\.
 
 In this tutorial, you perform the steps shown following: 
 

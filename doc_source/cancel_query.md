@@ -62,7 +62,7 @@ The result looks something like the following\.
 (1 row)
 ```
 
-To cancel the query with PID 18764, run the following command\.
+To cancel the query with PID 610, run the following command\.
 
 ```
 CANCEL 610;

@@ -1,3 +1,0 @@
-# Getting started with the Amazon Redshift Serverless console<a name="serverless-console"></a>
-
-In the Amazon Redshift Serverless console, you can manage all of your serverless resources, such as workgroups, namespaces, data backups, and alarms\. The first time you log in to the Amazon Redshift Serverless console, you are prompted to access the getting started experience, which you can use to configure your Amazon Redshift Serverless\. 

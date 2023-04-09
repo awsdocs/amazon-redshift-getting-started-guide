@@ -1,4 +1,4 @@
-# Connecting to Amazon Redshift<a name="connection"></a>
+# Connecting to Amazon Redshift provisioned clusters<a name="connection"></a>
 
 To connect to Amazon Redshift clusters, from the **Clusters** page, expand **Connect to Amazon Redshift clusters** and do one of the following:
 + Use the query editor v2 to run queries on databases hosted by your Amazon Redshift cluster\. After creating your cluster, you can immediately run queries by using the query editor v2\.
